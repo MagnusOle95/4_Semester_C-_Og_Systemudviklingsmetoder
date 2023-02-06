@@ -23,3 +23,4 @@ Console.WriteLine("Værkføre ugeløn: " + m3.BeregnUgeLøn());
 Console.WriteLine("Synsmand ugeløn: " + m4.BeregnUgeLøn());
 
 //Hej med dig :D
+Console.WriteLine("Hej med dig");
