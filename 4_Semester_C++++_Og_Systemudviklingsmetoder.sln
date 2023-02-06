@@ -33,6 +33,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dag3_Objektorientering", "D
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dag3_Opgave3.0", "Dag3_Opgave3.0\Dag3_Opgave3.0.csproj", "{2B9A5F83-21C6-4C5F-B00D-0D73945F5EE0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dag3_Opgave3.2_Medarbejder_Mekaniker_Værkføre_synsmand", "Dag3_Opgave3.2_Medarbejder_Mekaniker_Værkføre_synsmand\Dag3_Opgave3.2_Medarbejder_Mekaniker_Værkføre_synsmand.csproj", "{4A258A4E-C5BD-4DAF-9BCC-BDE5F6533008}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +77,10 @@ Global
 		{2B9A5F83-21C6-4C5F-B00D-0D73945F5EE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2B9A5F83-21C6-4C5F-B00D-0D73945F5EE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2B9A5F83-21C6-4C5F-B00D-0D73945F5EE0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A258A4E-C5BD-4DAF-9BCC-BDE5F6533008}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A258A4E-C5BD-4DAF-9BCC-BDE5F6533008}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A258A4E-C5BD-4DAF-9BCC-BDE5F6533008}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A258A4E-C5BD-4DAF-9BCC-BDE5F6533008}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -93,6 +99,7 @@ Global
 		{58DB48CA-240B-419F-9EC0-A3AA08522AC9} = {89F88FBB-ABF6-41BE-BFC8-BF12C03366CF}
 		{7AAE09A2-B42C-4712-A6E8-816ECC451659} = {5889EA89-EC6A-4C2D-BFBC-FCA2FBC771A4}
 		{2B9A5F83-21C6-4C5F-B00D-0D73945F5EE0} = {7AAE09A2-B42C-4712-A6E8-816ECC451659}
+		{4A258A4E-C5BD-4DAF-9BCC-BDE5F6533008} = {7AAE09A2-B42C-4712-A6E8-816ECC451659}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {42778F41-63F5-4C12-8162-D381AAAA12EA}
