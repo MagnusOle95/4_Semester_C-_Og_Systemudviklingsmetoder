@@ -3,9 +3,15 @@ using Dag3_Opgave3._2_Medarbejder_Mekaniker_Værkføre_synsmand;
 
 Console.WriteLine("Hello, World!");
 
-Medarbejder m2 = new Mekaniker("Frank", "Oles vej", 2018, 185);
-Medarbejder m3 = new Værkføre("Jens", "Jennergade", 2000, 185, 2010, 3500);
-Medarbejder m4 = new Synsmand("Hans", "Geovej", 2005, 50);
+//Opretter Cpr
+CprNr cprM2 = new CprNr("1995:9:16","1234");
+CprNr cprM3 = new CprNr("2002:12:2", "6666");
+CprNr cprM4 = new CprNr("1968:3:4", "9999");
+
+//Opretter medarbejdere. 
+Medarbejder m2 = new Mekaniker(cprM2,"Frank", "Oles vej", 2018, 185);
+Medarbejder m3 = new Værkføre(cprM3,"Jens", "Jennergade", 2000, 185, 2010, 3500);
+Medarbejder m4 = new Synsmand(cprM4,"Hans", "Geovej", 2005, 50);
 
 List<Medarbejder> liste = new List<Medarbejder>();
 
@@ -21,7 +27,3 @@ foreach (Medarbejder m in liste)
 Console.WriteLine("Mekaniker ugeløn: " + m2.BeregnUgeLøn());
 Console.WriteLine("Værkføre ugeløn: " + m3.BeregnUgeLøn());
 Console.WriteLine("Synsmand ugeløn: " + m4.BeregnUgeLøn());
-
-
-Console.WriteLine("Hej med dig");
-//Fortsæt her :D

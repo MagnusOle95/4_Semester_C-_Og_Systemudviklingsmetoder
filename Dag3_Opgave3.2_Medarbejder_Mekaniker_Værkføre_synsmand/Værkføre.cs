@@ -11,7 +11,7 @@ namespace Dag3_Opgave3._2_Medarbejder_Mekaniker_Værkføre_synsmand
         public int ChosentoJob { get; set; }
         public double SalarySupplement { get; set; }
 
-        public Værkføre(string name, string adress, int probationaryYear, double salary, int chosenJob, double salarySupplement) :base(name,adress,probationaryYear,salary)
+        public Værkføre(CprNr cprNummer,string name, string adress, int probationaryYear, double salary, int chosenJob, double salarySupplement) :base(cprNummer,name,adress,probationaryYear,salary)
         {
             ChosentoJob = chosenJob;
 ;           SalarySupplement = salarySupplement;

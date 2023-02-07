@@ -11,7 +11,7 @@ namespace Dag3_Opgave3._2_Medarbejder_Mekaniker_Værkføre_synsmand
         public int ProbationaryYear { get; set; }
         public virtual double Salary { get; set; }
 
-        public Mekaniker(string name, string adress,int probationaryYear, double salary): base(name,adress) 
+        public Mekaniker(CprNr cprNummer,string name, string adress,int probationaryYear, double salary): base(cprNummer,name,adress) 
         {
             ProbationaryYear= probationaryYear;
             Salary= salary;
