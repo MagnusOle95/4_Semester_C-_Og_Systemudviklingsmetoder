@@ -26,6 +26,7 @@ namespace Dag3_Opgave3._2_Medarbejder_Mekaniker_Værkføre_synsmand
         public int Size()
         {
             //Returns the number of elements in the collection.
+            Se her. 
         }
 
 
