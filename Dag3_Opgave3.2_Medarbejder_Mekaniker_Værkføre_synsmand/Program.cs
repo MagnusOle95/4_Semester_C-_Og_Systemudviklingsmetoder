@@ -27,3 +27,17 @@ foreach (Medarbejder m in liste)
 Console.WriteLine("Mekaniker ugeløn: " + m2.BeregnUgeLøn());
 Console.WriteLine("Værkføre ugeløn: " + m3.BeregnUgeLøn());
 Console.WriteLine("Synsmand ugeløn: " + m4.BeregnUgeLøn());
+
+Console.WriteLine();
+//Laver bibliotek, og afprøver metoder. 
+MedarbejderDictionary<CprNr> listeAfMedarbejdere = new MedarbejderDictionary<CprNr>();
+
+listeAfMedarbejdere.AddElement(m2.CprNummer,m2);
+listeAfMedarbejdere.AddElement(m3.CprNummer, m3);
+listeAfMedarbejdere.AddElement(m4.CprNummer, m4);
+
+int antal = listeAfMedarbejdere.Size();
+Console.WriteLine(antal);
+
+Medarbejder m1FromList = listeAfMedarbejdere.GetElement(cprM2);
+Console.WriteLine(m1FromList);
