@@ -10,7 +10,7 @@ namespace Dag3_Opgave3._2_Medarbejder_Mekaniker_Værkføre_synsmand
     {
         public int AmountOfMOTInaWeek { get; set; }
 
-        public Synsmand(CprNr cprNummer,string name, string adress, int probationaryYear, int amountOfMOTInaWeek) : base(cprNummer,name, adress, probationaryYear, 0)
+        public Synsmand(CprNr cprNummer,string name, Adresse adress, int probationaryYear, int amountOfMOTInaWeek) : base(cprNummer,name, adress, probationaryYear, 0)
         {
             AmountOfMOTInaWeek = amountOfMOTInaWeek;
         }

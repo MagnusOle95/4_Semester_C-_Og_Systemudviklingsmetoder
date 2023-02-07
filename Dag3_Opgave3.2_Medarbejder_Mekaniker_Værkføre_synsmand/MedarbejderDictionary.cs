@@ -12,9 +12,9 @@ namespace Dag3_Opgave3._2_Medarbejder_Mekaniker_Værkføre_synsmand
 {
     public class MedarbejderDictionary<TKey>
     {
-        private readonly Dictionary<TKey, Medarbejder> _collection = new Dictionary<TKey,Medarbejder>();
+        private readonly Dictionary<TKey, object> _collection = new Dictionary<TKey,object>();
 
-        public void AddElement(TKey k, Medarbejder p)
+        public void AddElement(TKey k, object o)
         {
             //Inserts a Medarbejder p into the collection.The function must fail if the key is already occupied by some other element
             if (_collection.ContainsKey(k))
@@ -23,11 +23,11 @@ namespace Dag3_Opgave3._2_Medarbejder_Mekaniker_Værkføre_synsmand
             }
             else
             {
-                _collection[k] = p;
+                _collection[k] = o;
             }
         }
 
-        public Medarbejder GetElement(TKey k)
+        public object GetElement(TKey k)
         {
             //Retrieves a Medarbejder identified by the TKey k. If not found then the function returns null.
             if (_collection.ContainsKey(k))

@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace Dag3_Opgave3._2_Medarbejder_Mekaniker_Værkføre_synsmand
 {
-    public abstract class Medarbejder
+    public abstract class Medarbejder: IharAdresse
     {
         public string Name { get; set; }
-        public string Adress { get; set; }
+        public Adresse Adress { get; set; }
         public int WorkingHours { get;}
         public CprNr CprNummer { get; set; }
 
-        public Medarbejder(CprNr cprNummer, string name, string adress) 
+        public Medarbejder(CprNr cprNummer, string name, Adresse adress) 
         {
             Name= name;    
             Adress= adress;
