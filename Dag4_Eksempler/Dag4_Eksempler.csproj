@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="Eksempler session 4\Delegates\.vs\Delegates\project-colors.json" />
+    <Content Include="Eksempler session 4\Events\.vs\Events\project-colors.json" />
+    <Content Include="Eksempler session 4\ExtensionMethods\.vs\ExtensionMethods\project-colors.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Eksempler session 4\Delegates\Delegates.sln" />
+    <None Include="Eksempler session 4\Delegates\Delegates\Delegates.csproj" />
+    <None Include="Eksempler session 4\Events\Events.sln" />
+    <None Include="Eksempler session 4\Events\Events\Events.csproj" />
+    <None Include="Eksempler session 4\ExtensionMethods\ExtensionMethods.sln" />
+    <None Include="Eksempler session 4\ExtensionMethods\ExtensionMethods\ExtensionMethods.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Eksempler session 4\Delegates\.vs\Delegates\v17\" />
+    <Folder Include="Eksempler session 4\Delegates\Delegates\bin\Release\" />
+    <Folder Include="Eksempler session 4\Delegates\Delegates\obj\Debug\TempPE\" />
+    <Folder Include="Eksempler session 4\Events\.vs\Events\v17\" />
+    <Folder Include="Eksempler session 4\Events\Events\obj\Debug\TempPE\" />
+    <Folder Include="Eksempler session 4\ExtensionMethods\.vs\ExtensionMethods\v17\" />
+    <Folder Include="Eksempler session 4\ExtensionMethods\ExtensionMethods\obj\Debug\TempPE\" />
+  </ItemGroup>
+
+</Project>
