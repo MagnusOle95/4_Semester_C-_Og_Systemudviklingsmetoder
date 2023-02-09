@@ -57,6 +57,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dag4_Opgave1_Point_To_Point
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dag4_Opgave3_Subscriber_Channel", "Dag4_Opgave3_Subscriber_Channel\Dag4_Opgave3_Subscriber_Channel.csproj", "{440FC27E-33A5-45B2-B9FF-BD360DB85810}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dag4_Opgave4_Opg3_Med_Message_Filtering_Pattern", "Dag4_Opgave4_Opg3_Med_Message_Filtering_Pattern\Dag4_Opgave4_Opg3_Med_Message_Filtering_Pattern.csproj", "{64D27B5D-E66A-42D3-AD83-BC3DE9219470}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -139,6 +141,10 @@ Global
 		{440FC27E-33A5-45B2-B9FF-BD360DB85810}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{440FC27E-33A5-45B2-B9FF-BD360DB85810}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{440FC27E-33A5-45B2-B9FF-BD360DB85810}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64D27B5D-E66A-42D3-AD83-BC3DE9219470}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64D27B5D-E66A-42D3-AD83-BC3DE9219470}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64D27B5D-E66A-42D3-AD83-BC3DE9219470}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64D27B5D-E66A-42D3-AD83-BC3DE9219470}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -169,6 +175,7 @@ Global
 		{F548B38C-2AE7-49D6-B350-4781069FECEF} = {D0239DE8-51CD-40DB-A69F-A8217D4FDEAC}
 		{8D6D5BAB-7EC8-47BD-BCD2-835582C2B503} = {F548B38C-2AE7-49D6-B350-4781069FECEF}
 		{440FC27E-33A5-45B2-B9FF-BD360DB85810} = {F548B38C-2AE7-49D6-B350-4781069FECEF}
+		{64D27B5D-E66A-42D3-AD83-BC3DE9219470} = {F548B38C-2AE7-49D6-B350-4781069FECEF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {42778F41-63F5-4C12-8162-D381AAAA12EA}
