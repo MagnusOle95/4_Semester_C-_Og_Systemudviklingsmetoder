@@ -11,6 +11,9 @@ namespace Dag4_Opgave4_Opg3_Med_Message_Filtering_Pattern
         static void Main(string[] args)
         {
 
+
+            Console.WriteLine("Hej");
+            Console.ReadLine();
         }
     }
 }
