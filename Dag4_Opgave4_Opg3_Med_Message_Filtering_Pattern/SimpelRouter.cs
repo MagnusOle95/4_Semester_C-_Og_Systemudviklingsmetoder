@@ -25,7 +25,7 @@ namespace Dag4_Opgave3_Subscriber_Channel
         private void OnMessage(Object source, ReceiveCompletedEventArgs asyncResult)
         {
             MessageQueue mq = (MessageQueue)source;
-            Message message = mq.EndReceive(asyncResult.AsyncResult);
+            Message message = mq.EndReceive(asyncResult.AsyncResult); //let me confus u
 
             string messageLabelAsString = (string)message.Label.Substring(0,3);
             Console.WriteLine(messageLabelAsString);

@@ -27,25 +27,25 @@ namespace Dag4_Opgave3_Subscriber_Channel
             //Opretter router. 
             SimpleRouter r = new SimpleRouter(AirportInformation_To_Router, Router_To_SAS, Router_To_KLM, Router_To_SWA);
 
-            //Opretter Flyinformation klasser
-            DateTime arrival = new DateTime(1993, 01, 01);
-            Flyinformation fSAS = new Flyinformation(arrival, "SAS2233");
+            ////Opretter Flyinformation klasser
+            //DateTime arrival = new DateTime(1993, 01, 01);
+            //Flyinformation fSAS = new Flyinformation(arrival, "SAS2233");
 
-            DateTime arrival2 = new DateTime(2022, 09, 22);
-            Flyinformation fKLM = new Flyinformation(arrival2, "KLM4455");
+            //DateTime arrival2 = new DateTime(2022, 09, 22);
+            //Flyinformation fKLM = new Flyinformation(arrival2, "KLM4455");
 
-            DateTime arrival3 = new DateTime(2023, 04, 23);
-            Flyinformation fSWA = new Flyinformation(arrival3, "SWA6677");
+            //DateTime arrival3 = new DateTime(2023, 04, 23);
+            //Flyinformation fSWA = new Flyinformation(arrival3, "SWA6677");
 
-            //Opretter besked og sender til router 
-            AirportInformation_To_Router.Send(fSAS, fSAS.FlyId);
-            AirportInformation_To_Router.Send(fKLM, fKLM.FlyId);
-            AirportInformation_To_Router.Send(fSWA, fSWA.FlyId);
+            ////Opretter besked og sender til router 
+            //AirportInformation_To_Router.Send(fSAS, fSAS.FlyId);
+            //AirportInformation_To_Router.Send(fKLM, fKLM.FlyId);
+            //AirportInformation_To_Router.Send(fSWA, fSWA.FlyId);
 
-            //// SAS modtager, aflæser fra SAS køen. 
-            //Message fSasInfo = Router_To_SAS.Receive();
-            //fSasInfo.Formatter = new XmlMessageFormatter(new Type[] { typeof(Flyinformation) });
-            //Console.WriteLine(fSasInfo.Body.ToString());
+            // SAS modtager, aflæser fra SAS køen. 
+            Message fSasInfo = Router_To_SAS.Receive();
+            fSasInfo.Formatter = new XmlMessageFormatter(new Type[] { typeof(Flyinformation) });
+            Console.WriteLine(fSasInfo.Body.ToString());
 
             //// KLM modtager, aflæser fra KLM køen. 
             //Message fKlmInfo = Router_To_KLM.Receive();
