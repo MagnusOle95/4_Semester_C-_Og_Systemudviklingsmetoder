@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Dag4_Opgave4_Opg3_Med_Message_Filtering_Pattern
+namespace Dag5_Opgave1_Tilføj_MapListe_Til_AIC_Og_Flyinformation_Klasse
 {
     public class Flyinformation
     {

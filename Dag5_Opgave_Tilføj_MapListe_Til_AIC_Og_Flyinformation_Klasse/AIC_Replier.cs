@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 using System.Messaging;
 using System.Diagnostics;
 
-namespace Dag5_Opgave1_Request_reciver
+namespace Dag5_Opgave1_Tilføj_MapListe_Til_AIC_Og_Flyinformation_Klasse
 {
     internal class AIC_Replier
     {
         private MessageQueue invalidQueue;
+        private Dictionary<string, Flyinformation> listeMedflyinformation = new Dictionary<string, Flyinformation>();
         
         public AIC_Replier (String requestQueueName, String InvalidQueueName)
         {
@@ -40,22 +41,10 @@ namespace Dag5_Opgave1_Request_reciver
             {
                 string contents = requestMessage.Body.ToString();
                 MessageQueue replyQueue = requestMessage.ResponseQueue;
-                string label = requestMessage.Label;
-
-                switch (label)
-                {
-                    case "SAS":
-                        contents = "13:45";
-                        break;
-                    case "KLM":
-                        contents = "14:25";
-                        break;
-                    case "SWA":
-                        contents = "15:40";
-                        break;
-                }
+                
                 Message replymessage = new Message();
-                replymessage.Body= contents;
+                replymessage.Label= contents;
+                replymessage.Body = listeMedflyinformation[contents];
                 replymessage.CorrelationId = requestMessage.Id;
                 replyQueue.Send(replymessage);
 
@@ -66,6 +55,11 @@ namespace Dag5_Opgave1_Request_reciver
                 invalidQueue.Send(requestMessage);
             }
             requestQueue.BeginReceive();
+        }
+
+        public void addFinfoToFlyinformationList(string flyidKey, Flyinformation flyinfo)
+        {
+            this.listeMedflyinformation.Add(flyidKey, flyinfo);
         }
     }
 }

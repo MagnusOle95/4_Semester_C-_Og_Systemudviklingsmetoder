@@ -5,7 +5,7 @@ using System.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Dag5_Opgave1_Request_reciver
+namespace Dag5_Opgave1_Tilføj_MapListe_Til_AIC_Og_Flyinformation_Klasse
 {
     internal class Flyselvskab_Requester
     {
@@ -34,9 +34,9 @@ namespace Dag5_Opgave1_Request_reciver
             requestQueue.Send(requestMessage);
         }
 
-        public void ReceviedSync()
+        public Message ReceviedSync()
         {
-            Message replyMessage = replyQueue.Receive();
+            return replyQueue.Receive();
         }
     }
 }

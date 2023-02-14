@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Dag5_Opgave1_Request_reciver
+namespace Dag5_Opgave1_Tilføj_MapListe_Til_AIC_Og_Flyinformation_Klasse
 {
     internal class Program
     {
@@ -29,6 +29,20 @@ namespace Dag5_Opgave1_Request_reciver
             Flyselvskab_Requester KLM = new Flyselvskab_Requester(Request, ReplyKLM, "KLM582");
             AIC_Replier AIC = new AIC_Replier(Request, Invalid);
 
+            //Opretter flyinformation. 
+            DateTime arrival = new DateTime(1993, 01, 01);
+            Flyinformation fSAS = new Flyinformation(arrival, "SAS249");
+
+            DateTime arrival2 = new DateTime(2022, 09, 22);
+            Flyinformation fKLM = new Flyinformation(arrival2, "KLM582");
+
+            DateTime arrival3 = new DateTime(2023, 04, 23);
+            Flyinformation fSWA = new Flyinformation(arrival3, "SWA1423");
+
+            //Tilføjer flyinformation til AIC's flyinformations liste. 
+            AIC.addFinfoToFlyinformationList(fSAS.FlyId, fSAS);
+            AIC.addFinfoToFlyinformationList(fKLM.FlyId, fKLM);
+            AIC.addFinfoToFlyinformationList(fSWA.FlyId, fSWA);
 
             ////Sender request, om fly. 
             //SAS.send();
@@ -36,7 +50,7 @@ namespace Dag5_Opgave1_Request_reciver
             //SWA.send();
 
             ////Modtager repose fra AIC reponse kør. 
-            //SAS.ReceviedSync();
+            Console.WriteLine(SAS.ReceviedSync().ToString());
             //KLM.ReceviedSync();
             //SWA.ReceviedSync();
 

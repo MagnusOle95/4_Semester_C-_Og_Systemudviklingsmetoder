@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{38C980C0-4F2E-4144-BC03-8610F89A87DF}</ProjectGuid>
+    <ProjectGuid>{B4E8C3BD-A416-4983-A6BF-5FF8832E4628}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Dag5_Opgave1_Request_reciver</RootNamespace>
-    <AssemblyName>Dag5_Opgave1_Request_reciver</AssemblyName>
+    <RootNamespace>Dag5_Opgave_Tilføj_MapListe_Til_AIC_Og_Flyinformation_Klasse</RootNamespace>
+    <AssemblyName>Dag5_Opgave_Tilføj_MapListe_Til_AIC_Og_Flyinformation_Klasse</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AIC_Replier.cs" />
+    <Compile Include="Flyinformation.cs" />
     <Compile Include="Flyselvskab_Requester.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

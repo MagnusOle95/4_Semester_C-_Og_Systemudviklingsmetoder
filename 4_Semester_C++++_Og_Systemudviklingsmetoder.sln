@@ -63,6 +63,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dag5 - Message Construction
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dag5_Opgave1_Request_reciver", "Dag5_Opgave1_Request_reciver\Dag5_Opgave1_Request_reciver.csproj", "{38C980C0-4F2E-4144-BC03-8610F89A87DF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dag5_Opgave1_Tilføj_MapListe_Til_AIC_Og_Flyinformation_Klasse", "Dag5_Opgave_Tilføj_MapListe_Til_AIC_Og_Flyinformation_Klasse\Dag5_Opgave1_Tilføj_MapListe_Til_AIC_Og_Flyinformation_Klasse.csproj", "{B4E8C3BD-A416-4983-A6BF-5FF8832E4628}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -153,6 +155,10 @@ Global
 		{38C980C0-4F2E-4144-BC03-8610F89A87DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{38C980C0-4F2E-4144-BC03-8610F89A87DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{38C980C0-4F2E-4144-BC03-8610F89A87DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4E8C3BD-A416-4983-A6BF-5FF8832E4628}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4E8C3BD-A416-4983-A6BF-5FF8832E4628}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4E8C3BD-A416-4983-A6BF-5FF8832E4628}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4E8C3BD-A416-4983-A6BF-5FF8832E4628}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -186,6 +192,7 @@ Global
 		{64D27B5D-E66A-42D3-AD83-BC3DE9219470} = {F548B38C-2AE7-49D6-B350-4781069FECEF}
 		{5D71B484-D6EA-4D45-B8A7-96E5F75F20D2} = {D0239DE8-51CD-40DB-A69F-A8217D4FDEAC}
 		{38C980C0-4F2E-4144-BC03-8610F89A87DF} = {5D71B484-D6EA-4D45-B8A7-96E5F75F20D2}
+		{B4E8C3BD-A416-4983-A6BF-5FF8832E4628} = {5D71B484-D6EA-4D45-B8A7-96E5F75F20D2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {42778F41-63F5-4C12-8162-D381AAAA12EA}
