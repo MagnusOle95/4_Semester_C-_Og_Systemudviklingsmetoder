@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -45,12 +46,12 @@ namespace Dag5_Opgave1_Tilføj_MapListe_Til_AIC_Og_Flyinformation_Klasse
             AIC.addFinfoToFlyinformationList(fSWA.FlyId, fSWA);
 
             ////Sender request, om fly. 
-            //SAS.send();
+            SAS.send();
             //KLM.send();
             //SWA.send();
 
             ////Modtager repose fra AIC reponse kør. 
-            Console.WriteLine(SAS.ReceviedSync().ToString());
+            Console.WriteLine(SAS.ReceviedSync().Body);
             //KLM.ReceviedSync();
             //SWA.ReceviedSync();
 

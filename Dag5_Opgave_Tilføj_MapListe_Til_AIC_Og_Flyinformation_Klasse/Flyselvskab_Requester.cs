@@ -20,7 +20,6 @@ namespace Dag5_Opgave1_Tilføj_MapListe_Til_AIC_Og_Flyinformation_Klasse
             this.flyid = flyId;
             replyQueue.MessageReadPropertyFilter.SetAll();
             ((XmlMessageFormatter)replyQueue.Formatter).TargetTypeNames = new string[] { "System.String,mscorlib" };
-
         }
 
         public void send()
@@ -36,7 +35,9 @@ namespace Dag5_Opgave1_Tilføj_MapListe_Til_AIC_Og_Flyinformation_Klasse
 
         public Message ReceviedSync()
         {
-            return replyQueue.Receive();
+            Message ReceviedMessage = replyQueue.Receive();
+            ReceviedMessage.Formatter = new XmlMessageFormatter(new Type[] { typeof(Flyinformation) });
+            return ReceviedMessage;
         }
     }
 }

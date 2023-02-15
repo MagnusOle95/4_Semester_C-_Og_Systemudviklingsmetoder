@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -10,7 +11,8 @@ namespace Dag5_Opgave1_Request_reciver
     {
         static void Main(string[] args)
         {
-            ////Opretter køerne.
+            //Opretter køerne.
+            
             //MessageQueue.Create(@".\Private$\BluffCityRequestQueueAIC");
             //MessageQueue.Create(@".\Private$\BluffCityReplyQueueSAS");
             //MessageQueue.Create(@".\Private$\BluffCityReplyQueueSW");
@@ -31,9 +33,9 @@ namespace Dag5_Opgave1_Request_reciver
 
 
             ////Sender request, om fly. 
-            //SAS.send();
-            //KLM.send();
-            //SWA.send();
+            SAS.send();
+            KLM.send();
+            SWA.send();
 
             ////Modtager repose fra AIC reponse kør. 
             //SAS.ReceviedSync();
