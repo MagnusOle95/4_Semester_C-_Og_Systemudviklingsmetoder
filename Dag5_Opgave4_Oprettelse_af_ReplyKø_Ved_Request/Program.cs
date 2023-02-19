@@ -5,7 +5,7 @@ using System.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Dag5_Opgave1_Tilføj_MapListe_Til_AIC_Og_Flyinformation_Klasse
+namespace Dag5_Opgave4_Oprettelse_af_ReplyKø_Ved_Request
 {
     internal class Program
     {
@@ -20,14 +20,11 @@ namespace Dag5_Opgave1_Tilføj_MapListe_Til_AIC_Og_Flyinformation_Klasse
 
             //Sørens program.
             String Request = @".\Private$\BluffCityRequestQueueAIC";
-            String ReplySAS = @".\Private$\BluffCityReplyQueueSAS";
-            String ReplySW = @".\Private$\BluffCityReplyQueueSW";
-            String ReplyKLM = @".\Private$\BluffCityReplyQueueKLM";
             String Invalid = @".\Private$\InvalidQueue";
 
-            Flyselvskab_Requester SAS = new Flyselvskab_Requester(Request, ReplySAS, "SAS249");
-            Flyselvskab_Requester SWA = new Flyselvskab_Requester(Request, ReplySW, "SWA1423");
-            Flyselvskab_Requester KLM = new Flyselvskab_Requester(Request, ReplyKLM, "KLM582");
+            Flyselvskab_Requester SAS = new Flyselvskab_Requester(Request, "SAS249");
+            Flyselvskab_Requester SWA = new Flyselvskab_Requester(Request, "SWA1423");
+            Flyselvskab_Requester KLM = new Flyselvskab_Requester(Request, "KLM582");
             AIC_Replier AIC = new AIC_Replier(Request, Invalid);
 
             //Opretter flyinformation. 
@@ -47,13 +44,13 @@ namespace Dag5_Opgave1_Tilføj_MapListe_Til_AIC_Og_Flyinformation_Klasse
 
             ////Sender request, om fly. 
             SAS.send();
-            KLM.send();
-            SWA.send();
+            //KLM.send();
+            //SWA.send();
 
-            ////Modtager repose fra AIC reponse kør. 
-            Console.WriteLine(SAS.ReceviedSync().Body);
-            Console.WriteLine(SWA.ReceviedSync().Body);
-            Console.WriteLine(KLM.ReceviedSync().Body);
+            ////Modtager repose fra AIC  
+            Console.WriteLine(SAS.ReceviedSync().Body);//Pause her så så man kan se køen oprettes"
+            //Console.WriteLine(SWA.ReceviedSync().Body);
+            //Console.WriteLine(KLM.ReceviedSync().Body);
 
             Console.ReadLine();
 
