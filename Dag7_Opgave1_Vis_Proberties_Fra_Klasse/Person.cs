@@ -8,7 +8,7 @@ using System.Threading.Tasks.Sources;
 
 namespace Dag7_Opgave1_Vis_Proberties_Fra_Klasse
 {
-    internal class Person
+    internal class Person : INotifyPropertyChanged
     {
         public string Name { get; set; }
         public int Age { get; set; }
