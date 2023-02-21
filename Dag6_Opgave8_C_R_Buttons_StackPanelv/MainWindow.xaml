@@ -1,0 +1,26 @@
+﻿<Window x:Class="Dag6_Opgave8_C_R_Buttons_StackPanelv.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Dag6_Opgave8_C_R_Buttons_StackPanelv"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <CheckBox x:Name="cLemon" Content="Lemon" HorizontalAlignment="Left" Margin="229,67,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="cOrange" Content="Orange" HorizontalAlignment="Left" Margin="229,87,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="cBanana" Content="Banana" HorizontalAlignment="Left" Margin="229,107,0,0" VerticalAlignment="Top"/>
+        
+
+        <RadioButton x:Name="rNorth" Content="North" HorizontalAlignment="Left" Margin="66,67,0,0" VerticalAlignment="Top" GroupName="MyGroup"/>
+        <RadioButton x:Name="rEast" Content="East" HorizontalAlignment="Left" Margin="66,107,0,0" VerticalAlignment="Top" GroupName="MyGroup"/>
+        <RadioButton x:Name="rVest" Content="Vest" HorizontalAlignment="Left" Margin="66,127,0,0" VerticalAlignment="Top" GroupName="MyGroup"/>
+        <RadioButton x:Name="rSouth" Content="South" HorizontalAlignment="Left" Margin="66,87,0,0" VerticalAlignment="Top" GroupName="MyGroup"/>
+
+        <TextBlock x:Name="rStatus" HorizontalAlignment="Left" Margin="66,195,0,0" TextWrapping="Wrap" Text="Status Radiobuttons:" VerticalAlignment="Top"/>
+        <TextBlock x:Name="cStatus" HorizontalAlignment="Left" Margin="229,195,0,0" TextWrapping="Wrap" Text="Status checkboxes:" VerticalAlignment="Top"/>
+        <TextBlock x:Name="rStatusResult" HorizontalAlignment="Left" Margin="66,217,0,0" TextWrapping="Wrap" Text="Nothing selected :(" VerticalAlignment="Top"/>
+        <TextBlock x:Name="cStatusResult" HorizontalAlignment="Left" Margin="229,217,0,0" TextWrapping="Wrap" Text="Nothing selected :(" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>

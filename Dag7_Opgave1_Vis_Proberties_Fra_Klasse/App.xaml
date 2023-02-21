@@ -1,7 +1,7 @@
-﻿<Application x:Class="Test123.App"
+﻿<Application x:Class="Dag7_Opgave1_Vis_Proberties_Fra_Klasse.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:Test123"
+             xmlns:local="clr-namespace:Dag7_Opgave1_Vis_Proberties_Fra_Klasse"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
          

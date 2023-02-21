@@ -13,28 +13,38 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Dag6_Opgave7_Grid_Statusbar_Menubar
+namespace Dag7_Opgave1_Vis_Proberties_Fra_Klasse
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
+        Person p = new Person();
         public MainWindow()
         {
             InitializeComponent();
-            Open.Click += ClickÍnMenu;
-            SaveAs.Click += ClickÍnMenu;
-            Exit.Click += ClickÍnMenu;
-            About.Click += ClickÍnMenu;
 
+            p.Name = "Ulla";
+            p.Age = 52;
+            p.Weight = 48;
+            p.Score = 107;
+            p.Accepted = true;
+
+            tfName.DataContext= p;
+            tfAge.DataContext= p;
+            tfWeight.DataContext= p;
+            tfScore.DataContext= p;
+            cbAccepted.DataContext= p;
         }
 
-        private void ClickÍnMenu(object sender, RoutedEventArgs e)
+        private void bChancePerson_Click(object sender, RoutedEventArgs e)
         {
-            StatusLabel.Text = "Status: " + ((MenuItem)sender).Name;
+            p.Name = "Mette Frederiksen";
+            p.Age = 80;
+            p.Weight = 100;
+            p.Score = 0;
+            p.Accepted = false;
         }
-
-
     }
 }

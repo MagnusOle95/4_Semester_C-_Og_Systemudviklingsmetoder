@@ -1,0 +1,24 @@
+﻿<Window x:Class="Dag7_Opgave1_Vis_Proberties_Fra_Klasse.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Dag7_Opgave1_Vis_Proberties_Fra_Klasse"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <TextBox x:Name="tfName" HorizontalAlignment="Left" Margin="220,47,0,0" TextWrapping="Wrap" Text="{Binding Path=Name}" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="tfAge" HorizontalAlignment="Left" Margin="220,75,0,0" TextWrapping="Wrap" Text="{Binding Path=Age}" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="tfWeight" HorizontalAlignment="Left" Margin="220,103,0,0" TextWrapping="Wrap" Text="{Binding Path=Weight}" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="tfScore" HorizontalAlignment="Left" Margin="220,131,0,0" TextWrapping="Wrap" Text="{Binding Path=Score}" VerticalAlignment="Top" Width="120"/>
+        <TextBlock x:Name="lName" HorizontalAlignment="Left" Margin="140,48,0,0" TextWrapping="Wrap" Text="Name:" VerticalAlignment="Top"/>
+        <TextBlock x:Name="lAge" HorizontalAlignment="Left" Margin="140,76,0,0" TextWrapping="Wrap" Text="Age:" VerticalAlignment="Top"/>
+        <TextBlock x:Name="lWeight" HorizontalAlignment="Left" Margin="140,104,0,0" TextWrapping="Wrap" Text="Weight:" VerticalAlignment="Top"/>
+        <TextBlock x:Name="lScore" HorizontalAlignment="Left" Margin="140,131,0,0" TextWrapping="Wrap" Text="Score:" VerticalAlignment="Top"/>
+        <TextBlock x:Name="lAccepted" HorizontalAlignment="Left" Margin="140,159,0,0" TextWrapping="Wrap" Text="Accepted:" VerticalAlignment="Top"/>
+        <CheckBox x:Name="cbAccepted" Content="" HorizontalAlignment="Left" Margin="220,160,0,0" VerticalAlignment="Top" IsChecked="{Binding Path=Accepted}" />
+        <Button x:Name="bChancePerson" Content="Chance person!" HorizontalAlignment="Left" Margin="140,202,0,0" VerticalAlignment="Top" Width="94" Click="bChancePerson_Click"/>
+        <Button x:Name="bPrintPerson" Content="Print current person to console!" HorizontalAlignment="Left" Margin="140,242,0,0" VerticalAlignment="Top" Width="172"/>
+
+    </Grid>
+</Window>

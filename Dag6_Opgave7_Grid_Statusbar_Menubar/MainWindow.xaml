@@ -22,15 +22,11 @@
             </Menu>
 
             <StatusBar DockPanel.Dock="Bottom">
-                <StatusBarItem>
-                    <TextBlock Name="lblCursorPosition" Text="Status: "/>
-                </StatusBarItem>
+                <TextBlock Name="StatusLabel" Text="Status: ... "/>
             </StatusBar>
-            <TextBox AcceptsReturn="True" Name="StatusBar" SelectionChanged="txtEditor_SelectionChanged" />
-            
+            <TextBox AcceptsReturn="True" Name="StatusBar"/>
+
+
         </DockPanel>
-
-        
-
     </Grid>
 </Window>
