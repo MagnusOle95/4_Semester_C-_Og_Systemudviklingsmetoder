@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Dag6_Start_Opgave1
+namespace Dag6_Grid
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -23,27 +23,6 @@ namespace Dag6_Start_Opgave1
         public MainWindow()
         {
             InitializeComponent();
-            Radio1.Checked += RadioButton_Checked;
-            Radio2.Checked += RadioButton_Checked;
-        }
-
-        
-
-
-
-        private void Knap1_Click(object sender, RoutedEventArgs e)
-        {
-            Knap1.Content = "Hej";
-        }
-
-        private void RadioButton_Checked(object sender, RoutedEventArgs e)
-        {
-            if (((RadioButton)sender).IsChecked == true)
-            {
-                Knap1.Visibility = Visibility.Collapsed;
-            }
-
         }
     }
-    
 }

@@ -7,9 +7,11 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Button x:Name="Knap1" Content="Bare en knap" HorizontalAlignment="Left" Margin="200,70,0,0" VerticalAlignment="Top" Background="#FFE61111"/>
-        <RadioButton x:Name="Radio1" Content="Ost" HorizontalAlignment="Left" Margin="200,107,0,0" VerticalAlignment="Top"/>
-        <RadioButton x:Name="Radio2" Content="Skinke" HorizontalAlignment="Left" Margin="200,147,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked"/>
+        <Button x:Name="Knap1" Content="Bare en knap" HorizontalAlignment="Left" Margin="200,70,0,0" VerticalAlignment="Top" Background="#FFE61111" Click="Knap1_Click"/>
+        <RadioButton x:Name="Radio1" Content="Radio1" HorizontalAlignment="Left" Margin="200,119,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="Radio2" Content="Radio2" HorizontalAlignment="Left" Margin="200,151,0,0" VerticalAlignment="Top"/>
+
+
 
     </Grid>
 </Window>
