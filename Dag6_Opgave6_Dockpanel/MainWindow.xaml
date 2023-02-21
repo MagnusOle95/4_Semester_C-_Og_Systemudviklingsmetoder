@@ -1,0 +1,19 @@
+﻿<Window x:Class="Dag6_Opgave6_Dockpanel.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Dag6_Opgave6_Dockpanel"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <DockPanel LastChildFill="True">
+            <Button x:Name="bNord" DockPanel.Dock="Top" FontFamily="Courier New" FontSize="36">Nord</Button>
+            <Button x:Name="bSyd" DockPanel.Dock="Bottom" FontFamily="Courier New" FontSize="36">Syd</Button>
+            <Button x:Name="bVest" DockPanel.Dock="Left" FontFamily="Courier New" FontSize="36">Vest</Button>
+            <Button x:Name="bOest" DockPanel.Dock="Right" FontFamily="Courier New" FontSize="36" Width="129">Øst</Button>
+            <TextBlock x:Name="tCenter" FontFamily="Courier New" FontSize="36">Teksten:</TextBlock>
+        </DockPanel>
+            
+    </Grid>
+</Window>

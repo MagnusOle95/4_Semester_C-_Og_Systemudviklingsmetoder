@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Dag6_Grid_Opgave2
+namespace Dag6_Opgave7_Grid_Statusbar_Menubar
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -23,20 +23,18 @@ namespace Dag6_Grid_Opgave2
         public MainWindow()
         {
             InitializeComponent();
+            Open.Click += ClickÍnMenu;
+            Save_As.Click += ClickÍnMenu;
+            Exit.Click += ClickÍnMenu;
+            About.Click += ClickÍnMenu;
+
         }
 
-        private void BN_Click(object sender, RoutedEventArgs e)
+        private void ClickÍnMenu(object sender, RoutedEventArgs e)
         {
-            String temp = VN.Content.ToString();
-            VN.Content = HN.Content;
-            HN.Content = temp;
+            lblCursorPosition.Text += "Status: " + ((MenuItem)sender).Name;
         }
 
-        private void BO_Click(object sender, RoutedEventArgs e)
-        {
-            String temp = VO.Content.ToString();
-            VO.Content = HO.Content;
-            HO.Content = temp;
-        }
+
     }
 }

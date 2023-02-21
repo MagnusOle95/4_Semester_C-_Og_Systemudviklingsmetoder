@@ -17,7 +17,7 @@
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <Button Grid.Column="1" Content="Button" HorizontalAlignment="Center" Margin="0,94,0,0" VerticalAlignment="Top" Height="63" Width="126" RenderTransformOrigin="0.5,0.5">
+        <Button x:Name="BO" Grid.Column="1" Content="SkiftOppe" HorizontalAlignment="Center" Margin="0,94,0,0" VerticalAlignment="Top" Height="63" Width="126" RenderTransformOrigin="0.5,0.5" Click="BO_Click">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -27,10 +27,10 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-        <Button Grid.Column="1" Content="Button" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" Height="68" RenderTransformOrigin="-0.282,-0.64" Width="126"/>
-        <Label x:Name="Label1" Content="Batman" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <Label x:Name="Label2" Content="Hulk" HorizontalAlignment="Center" Margin="0,83,0,0" Grid.Row="1" VerticalAlignment="Top"/>
-        <Label x:Name="Label3" Grid.Column="2" Content="Robin" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <Label x:Name="Label4" Grid.Column="2" Content="Spiderman" HorizontalAlignment="Center" Margin="0,91,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+        <Button x:Name="BN" Grid.Column="1" Content="SkiftNederst" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" Height="68" RenderTransformOrigin="-0.282,-0.64" Width="126" Click="BN_Click"/>
+        <Label x:Name="VO" Content="Batman" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Label x:Name="VN" Content="Hulk" HorizontalAlignment="Center" Margin="0,83,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+        <Label x:Name="HO" Grid.Column="2" Content="Robin" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Label x:Name="HN" Grid.Column="2" Content="Spiderman" HorizontalAlignment="Center" Margin="0,91,0,0" Grid.Row="1" VerticalAlignment="Top"/>
     </Grid>
 </Window>

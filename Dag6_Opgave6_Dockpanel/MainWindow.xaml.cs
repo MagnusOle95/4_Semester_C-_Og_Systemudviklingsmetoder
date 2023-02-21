@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Dag6_Grid_Opgave2
+namespace Dag6_Opgave6_Dockpanel
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -23,20 +23,17 @@ namespace Dag6_Grid_Opgave2
         public MainWindow()
         {
             InitializeComponent();
+            bNord.Click += b_Click;
+            bSyd.Click += b_Click;
+            bOest.Click += b_Click;
+            bVest.Click += b_Click;
         }
 
-        private void BN_Click(object sender, RoutedEventArgs e)
+        private void b_Click(object sender, RoutedEventArgs e)
         {
-            String temp = VN.Content.ToString();
-            VN.Content = HN.Content;
-            HN.Content = temp;
+
+            tCenter.Text += "\n" + ((Button)sender).Content;
         }
 
-        private void BO_Click(object sender, RoutedEventArgs e)
-        {
-            String temp = VO.Content.ToString();
-            VO.Content = HO.Content;
-            HO.Content = temp;
-        }
     }
 }
