@@ -24,7 +24,7 @@ namespace Dag6_Opgave7_Grid_Statusbar_Menubar
         {
             InitializeComponent();
             Open.Click += ClickÍnMenu;
-            Save_As.Click += ClickÍnMenu;
+            SaveAs.Click += ClickÍnMenu;
             Exit.Click += ClickÍnMenu;
             About.Click += ClickÍnMenu;
 
