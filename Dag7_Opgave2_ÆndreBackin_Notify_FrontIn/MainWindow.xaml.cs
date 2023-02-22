@@ -12,8 +12,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Xml.Linq;
 
-namespace Dag7_Opgave1_Vis_Proberties_Fra_Klasse
+namespace Dag7_Opgave2_ÆndreBackin_Notify_FrontIn
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -31,11 +32,11 @@ namespace Dag7_Opgave1_Vis_Proberties_Fra_Klasse
             p.Score = 107;
             p.Accepted = true;
 
-            tfName.DataContext= p;
-            tfAge.DataContext= p;
-            tfWeight.DataContext= p;
-            tfScore.DataContext= p;
-            cbAccepted.DataContext= p;
+            tfName.DataContext = p;
+            tfAge.DataContext = p;
+            tfWeight.DataContext = p;
+            tfScore.DataContext = p;
+            cbAccepted.DataContext = p;
         }
 
         private void bChancePerson_Click(object sender, RoutedEventArgs e)
@@ -45,11 +46,6 @@ namespace Dag7_Opgave1_Vis_Proberties_Fra_Klasse
             p.Weight = 100;
             p.Score = 0;
             p.Accepted = false;
-        }
-
-        private void bPrintPerson_Click(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show(p.ToString());
         }
     }
 }

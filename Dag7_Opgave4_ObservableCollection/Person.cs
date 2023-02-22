@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Threading.Tasks.Sources;
 
-namespace Dag7_Opgave1_Vis_Proberties_Fra_Klasse
+namespace Dag7_Opgave4_ObservableCollection
 {
     internal class Person : INotifyPropertyChanged
     {
@@ -17,6 +17,16 @@ namespace Dag7_Opgave1_Vis_Proberties_Fra_Klasse
         public Boolean accepted;
 
         public event PropertyChangedEventHandler? PropertyChanged;
+
+        public Person() { }
+        public Person(string name, int age, int weight, int score, Boolean accepted) 
+        {
+            this.name = name;
+            this.age = age;
+            this.weight = weight;
+            this.score = score;
+            this.accepted = accepted;
+        }
 
         private void NotifyPropertyChanged(string propertyName)
         {
