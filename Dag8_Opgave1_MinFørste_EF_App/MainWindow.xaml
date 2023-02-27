@@ -1,0 +1,17 @@
+﻿<Window x:Class="Dag8_Opgave1_MinFørste_EF_App.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Dag8_Opgave1_MinFørste_EF_App"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Button x:Name="bVisListe" Content="Vis liste" HorizontalAlignment="Left" Margin="21,273,0,0" VerticalAlignment="Top" Height="83" Width="145" Click="bVisListe_Click"/>
+        <Button x:Name="bOpretbil" Content="Opret bil" HorizontalAlignment="Left" Margin="182,273,0,0" VerticalAlignment="Top" Height="83" Width="146" Click="bOpretbil_Click"/>
+        <ListBox x:Name="Liste1" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="21,53,456,188"/>
+        <Button x:Name="bSeach" Content="Søg" HorizontalAlignment="Left" Margin="373,273,0,0" VerticalAlignment="Top" Height="83" Width="146" Click="bSeach_Click"/>
+        <TextBox x:Name="txfSøg" HorizontalAlignment="Left" Margin="374,206,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="145" Height="40"/>
+
+    </Grid>
+</Window>
