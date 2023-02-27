@@ -30,9 +30,25 @@ namespace Dag8_Opgave1_MinFørste_EF_App
             bool created = context.Database.EnsureCreated();
             if (created)
             {
+                initBilerOgPersoner();
                 MessageBox.Show("Database created");
             }
         }
+
+        private void initBilerOgPersoner()
+        {
+            //Laver biler. 
+            context.Biler.Add(new Bil("Mazda", 2000, true));
+            context.Biler.Add(new Bil("Mercedes", 1800, false));
+            context.Biler.Add(new Bil("BMW", 2500, false));
+
+            //Laver personer. 
+            context.Persons.Add(new Person("Per",22));
+            context.Persons.Add(new Person("Morten", 45));
+
+            context.SaveChanges();
+        }
+
 
         private void bVisListe_Click(object sender, RoutedEventArgs e)
         {

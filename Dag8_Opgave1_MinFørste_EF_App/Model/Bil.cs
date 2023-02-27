@@ -15,15 +15,13 @@ namespace Dag8_Opgave1_MinFørste_EF_App.Model
         public int Weigth { get; set; }
         public bool Diesel { get; set; }
         public int Age { get; set; }
-        //public Person Ejer { get; set; }
-        internal Bil(string name, int weigth, bool diesel)
+       
+        public Bil(string name, int weigth, bool diesel)
         {
             Name = name;
             Weigth = weigth;
             Diesel = diesel;
-            Age= 10;
-            //Ejer = ejer;
-            //ejer.Biler.Add(this);
+            Age = 10;
         }
 
         public Bil()
