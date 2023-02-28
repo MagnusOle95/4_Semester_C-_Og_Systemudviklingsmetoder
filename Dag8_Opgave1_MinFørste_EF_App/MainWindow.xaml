@@ -7,13 +7,13 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Button x:Name="bVisListe" Content="Vis liste" HorizontalAlignment="Left" Margin="21,313,0,0" VerticalAlignment="Top" Height="60" Width="105" Click="bVisListe_Click"/>
-        <Button x:Name="bOpretbil" Content="Opret bil" HorizontalAlignment="Left" Margin="338,313,0,0" VerticalAlignment="Top" Height="60" Width="100" Click="bOpretbil_Click"/>
+        <Button x:Name="bOpretbil" Content="Opret bil" HorizontalAlignment="Left" Margin="171,313,0,0" VerticalAlignment="Top" Height="60" Width="100" Click="bOpretbil_Click"/>
         <ListBox x:Name="Liste1" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="21,53,456,188"/>
-        <Button x:Name="bSeach" Content="Søg" HorizontalAlignment="Left" Margin="174,313,0,0" VerticalAlignment="Top" Height="60" Width="105" Click="bSeach_Click"/>
-        <TextBox x:Name="txfSøg" HorizontalAlignment="Left" Margin="154,258,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="145" Height="40"/>
+        <Button x:Name="bSeach" Content="Søg" HorizontalAlignment="Left" Margin="21,313,0,0" VerticalAlignment="Top" Height="60" Width="105" Click="bSeach_Click"/>
+        <TextBox x:Name="txfSøg" HorizontalAlignment="Left" Margin="21,265,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="145" Height="40"/>
         <ListBox x:Name="liste2" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="400,53,124,188" SelectionChanged="liste2_SelectionChanged"/>
-        <Button x:Name="bOpretPerson" Content="Opret person " HorizontalAlignment="Left" Margin="490,313,0,0" VerticalAlignment="Top" Height="60" Width="96" Click="bOpretPerson_Click"/>
+        <Button x:Name="bOpretPerson" Content="Opret person " HorizontalAlignment="Left" Margin="315,313,0,0" VerticalAlignment="Top" Height="60" Width="96" Click="bOpretPerson_Click"/>
+        <Button x:Name="bResetLister" Content="Reset lister" HorizontalAlignment="Left" Margin="460,313,0,0" VerticalAlignment="Top" Height="60" Width="97" Click="bResetLister_Click"/>
 
     </Grid>
 </Window>
