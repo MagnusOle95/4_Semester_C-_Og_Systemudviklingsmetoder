@@ -18,12 +18,17 @@ namespace Dag8_Opgave1_xml_Splitter
             //MessageQueue.Create(@".\Private$\AirportCheckInOutput");
             //MessageQueue.Create(@".\Private$\LuggageQueue");
             //MessageQueue.Create(@".\Private$\PassengerQueue");
+            //MessageQueue.Create(@".\Private$\ResequenzerOut");
+            //MessageQueue.Create(@".\Private$\BeginResequenz");
 
 
             //Forbinder til køerne. 
             MessageQueue messageQueue = new MessageQueue(@".\Private$\AirportCheckInOutput");
             MessageQueue Luggagequeue = new MessageQueue(@".\Private$\LuggageQueue");
             MessageQueue PassengerQueue = new MessageQueue(@".\Private$\PassengerQueue");
+            MessageQueue ResequenzerQueue = new MessageQueue(@".\Private$\ResequenzerOut");
+            MessageQueue BeginResequenzQueue = new  MessageQueue(@".\Private$\BeginResequenz");
+
 
 
 
@@ -35,7 +40,8 @@ namespace Dag8_Opgave1_xml_Splitter
             messageQueue.Send(CheckInFile, label);
 
             //opretter router. 
-            Router_Splitter Router_Splitter = new Router_Splitter(messageQueue,Luggagequeue,PassengerQueue);
+            Router_Splitter Router_Splitter = new Router_Splitter(messageQueue,Luggagequeue,PassengerQueue,BeginResequenzQueue);
+            Resequenzer resequenzer = new Resequenzer(Luggagequeue,ResequenzerQueue,BeginResequenzQueue);
 
             Console.ReadLine();
 

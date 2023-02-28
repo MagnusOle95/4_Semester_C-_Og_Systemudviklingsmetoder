@@ -16,13 +16,15 @@ namespace Dag8_Opgave1_xml_Splitter
         protected MessageQueue inQueue;
         protected MessageQueue passengerQueue;
         protected MessageQueue LuggageQueue;
-        public Router_Splitter(MessageQueue inQueue, MessageQueue luggageQueue, MessageQueue PassengerQueue) 
+        protected MessageQueue beginResequenz;
+        public Router_Splitter(MessageQueue inQueue, MessageQueue luggageQueue, MessageQueue PassengerQueue, MessageQueue beginreseQuenzQueue) 
         {
             inQueue.ReceiveCompleted += new ReceiveCompletedEventHandler(OnMessage);
             inQueue.BeginReceive();
             string label = inQueue.Label;
             this.passengerQueue = PassengerQueue;
             this.LuggageQueue = luggageQueue;
+            this.beginResequenz = beginreseQuenzQueue;
         }
 
         private void OnMessage(Object source, ReceiveCompletedEventArgs asyncResult)
@@ -46,9 +48,14 @@ namespace Dag8_Opgave1_xml_Splitter
             
             foreach (var l in luggages)
             {
-                LuggageQueue.Send(l, "Owner: " + passenger.Element("FirstName").Value);
+                LuggageQueue.Send(l, "" + passenger.Element("FirstName").Value);
             }
 
+            //Fortæller resequenzer at den skal starte. 
+            Message go = new Message();
+            go.Label = "Go";
+            go.Body = "Go";
+            beginResequenz.Send(go);
             //Printer elemeter ud fra listen.
             
             string reservationsNummer = passenger.Element("ReservationNumber").Value;
