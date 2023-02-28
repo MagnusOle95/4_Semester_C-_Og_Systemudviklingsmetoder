@@ -143,8 +143,6 @@ namespace Dag8_Opgave1_MinFørste_EF_App
             VisListe();
         }
 
-        //Tjek
-
 
     }
 }
