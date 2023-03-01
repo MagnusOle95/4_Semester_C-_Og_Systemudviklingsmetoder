@@ -22,12 +22,15 @@ namespace Dag8_Opgave1_xml_Splitter
             //MessageQueue.Create(@".\Private$\BeginResequenz");
 
 
+
             //Forbinder til køerne. 
             MessageQueue messageQueue = new MessageQueue(@".\Private$\AirportCheckInOutput");
             MessageQueue Luggagequeue = new MessageQueue(@".\Private$\LuggageQueue");
             MessageQueue PassengerQueue = new MessageQueue(@".\Private$\PassengerQueue");
             MessageQueue ResequenzerQueue = new MessageQueue(@".\Private$\ResequenzerOut");
             MessageQueue BeginResequenzQueue = new  MessageQueue(@".\Private$\BeginResequenz");
+            MessageQueue AgregaterOutQueue = new MessageQueue(@".\Private$\AgregaterOut");
+           
 
 
 

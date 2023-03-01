@@ -16,7 +16,6 @@ namespace Dag8_Opgave1_xml_Splitter
         protected MessageQueue inQueue;
         protected MessageQueue outQueue;
         protected MessageQueue BeginResequenzQueue;
-        private Message[] beskederInd;
 
         public Resequenzer(MessageQueue inQueue, MessageQueue outQueue, MessageQueue BeginResequenzQueue) 
         {
@@ -41,43 +40,27 @@ namespace Dag8_Opgave1_xml_Splitter
             //Finder antalbeskeder i køen og henter dem ud i et array. 
             int antalBeskeder = inQueue.GetAllMessages().Count();
             Console.WriteLine(antalBeskeder);
-            Message[] beskeder = new Message[antalBeskeder];
 
-            for (int i = 0; i< antalBeskeder; i++)
+            //Her putter jeg beskederne ind i den rigtige rækkefølge.  
+            Message[] resequenzedList = new Message[antalBeskeder];
+            for(int i = 0; i < antalBeskeder; i++)
             {
-                beskeder[i] = inQueue.Receive();
-            }
+                Message m = inQueue.Receive();
 
-            //Her vil jeg resequenze beskederne. 
-            Message[] resequenzedList = new Message[antalBeskeder + 1];
-            foreach (Message m in beskeder) 
-            {
                 StreamReader reader = new StreamReader(m.BodyStream);
                 XElement mbody = XElement.Parse(reader.ReadToEnd());
 
-                int index = int.Parse(mbody.Element("Identification").Value);
+                int index = int.Parse(mbody.Element("Identification").Value) - 1;
 
                 resequenzedList[index] = m;
             }
 
             //Sender ud til køen. 
-            for(int i = 1; i < resequenzedList.Length; i++) 
+            for (int i = 0; i < resequenzedList.Length; i++) 
             {
                 outQueue.Send(resequenzedList[i]);
             }
 
-
-
-            //foreach (Message mInd in beskederInd) 
-            //{
-            //    dic.Add(int.Parse(mInd.Label), mInd);
-            //}
-
-            //for (int i = 0; i <= beskederInd.Length;i++)
-            //{
-            //    var m= dic[i+1];
-            //    outQueue.Send(m);
-            //}
 
         }
     }

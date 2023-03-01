@@ -125,6 +125,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dag9_DTOCore", "Dag9_DTOCor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dag9_GuiCore", "Dag9_GuiCore\Dag9_GuiCore.csproj", "{386AD6BE-C81B-4188-9B8A-A3EE2D90696B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dag8_Opgave2_Aggregaterr", "Dag8_Opgave2_Aggregaterr\Dag8_Opgave2_Aggregaterr.csproj", "{56D4BF03-98C9-48CD-BD4D-E9C2EA3A4FDC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -311,6 +313,10 @@ Global
 		{386AD6BE-C81B-4188-9B8A-A3EE2D90696B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{386AD6BE-C81B-4188-9B8A-A3EE2D90696B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{386AD6BE-C81B-4188-9B8A-A3EE2D90696B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56D4BF03-98C9-48CD-BD4D-E9C2EA3A4FDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56D4BF03-98C9-48CD-BD4D-E9C2EA3A4FDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56D4BF03-98C9-48CD-BD4D-E9C2EA3A4FDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56D4BF03-98C9-48CD-BD4D-E9C2EA3A4FDC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -375,6 +381,7 @@ Global
 		{69FBA7EE-0B5D-43C6-BD62-4921447AAFA0} = {BE2D7487-9908-4574-8990-88CAB8117F91}
 		{FEA88280-388C-47A2-8569-03BFBB25868F} = {BE2D7487-9908-4574-8990-88CAB8117F91}
 		{386AD6BE-C81B-4188-9B8A-A3EE2D90696B} = {BE2D7487-9908-4574-8990-88CAB8117F91}
+		{56D4BF03-98C9-48CD-BD4D-E9C2EA3A4FDC} = {6025950D-2423-4C9E-9B56-86B9460125F3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {42778F41-63F5-4C12-8162-D381AAAA12EA}
