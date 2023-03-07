@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -25,9 +26,6 @@ namespace Dag8_Opgave2_Aggregaterr
 
         public void agregateMessages()
         {
-            //Finder antal i kø. 
-            int Amount = inLuggage.GetAllMessages().Count();
-
             //Laver parent XElement
             XElement parentElement = new XElement("Information");
 
@@ -37,22 +35,34 @@ namespace Dag8_Opgave2_Aggregaterr
             StreamReader pReader = new StreamReader(passenger.BodyStream);
             XElement pbody = XElement.Parse(pReader.ReadToEnd());
 
+            //Finder reservations nummer på person.
+            string resNr = pbody.Element("ReservationNumber").Value;
+
+            //Tilføjer Passagere til XML parent. 
             parentElement.Add(pbody);
 
             ////Henter og tilføjer alle passengere luggage. 
-            for (int i = 0; i < Amount ; i++)
-            {
-                Message luggage = inLuggage.Receive();
 
-                StreamReader lReader = new StreamReader(luggage.BodyStream);
+            Message[] luggageQ = inLuggage.GetAllMessages();
+
+
+            foreach (Message l in luggageQ) 
+            { 
+                StreamReader lReader = new StreamReader(l.BodyStream);
                 XElement lBody = XElement.Parse(lReader.ReadToEnd());
 
-                parentElement.Add(lBody);
+                if (resNr.Equals(lBody.Element("Id").Value))
+                {
+                    parentElement.Add(lBody);
+                    Message tempL = inLuggage.Receive();
+                    tempL.Dispose(); //Fjerner alt om temlp i Ram. 
+                }
+                else
+                {
+                    break;
+                }
             }
-
-            outQueue.Send(parentElement);
-           
+            outQueue.Send(parentElement); 
         }
-
     }
 }

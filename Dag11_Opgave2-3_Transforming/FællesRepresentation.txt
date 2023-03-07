@@ -1,0 +1,10 @@
+﻿
+public class AirlineCompanySAS {
+	String Airline; // Flyselvskabets navn x
+	String FlightNo; // Flynummer. x
+	String DepartureAirport; // afgangslufthavn x
+	String DestinationAirport; //ankomst Lufthavn x
+	string status på ankomst eller afgang //  x 
+	DateTime //tidspunkt x
+}
+

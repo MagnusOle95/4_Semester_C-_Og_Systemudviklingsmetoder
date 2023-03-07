@@ -117,15 +117,19 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PetHotelWPF", "PetHotelWPF\
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dag9_Tre lags arkitektur", "Dag9_Tre lags arkitektur", "{BE2D7487-9908-4574-8990-88CAB8117F91}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dag9_BusinessLogicCore", "Dag9_BusinessLogicCore\Dag9_BusinessLogicCore.csproj", "{E637286F-1816-4AC7-85CE-D68FCC92C140}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dag9_BusinessLogicCore", "Dag9_BusinessLogicCore\Dag9_BusinessLogicCore.csproj", "{E637286F-1816-4AC7-85CE-D68FCC92C140}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dag9_DataAccessCore", "Dag9_DataAccessCore\Dag9_DataAccessCore.csproj", "{69FBA7EE-0B5D-43C6-BD62-4921447AAFA0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dag9_DataAccessCore", "Dag9_DataAccessCore\Dag9_DataAccessCore.csproj", "{69FBA7EE-0B5D-43C6-BD62-4921447AAFA0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dag9_DTOCore", "Dag9_DTOCore\Dag9_DTOCore.csproj", "{FEA88280-388C-47A2-8569-03BFBB25868F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dag9_DTOCore", "Dag9_DTOCore\Dag9_DTOCore.csproj", "{FEA88280-388C-47A2-8569-03BFBB25868F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dag9_GuiCore", "Dag9_GuiCore\Dag9_GuiCore.csproj", "{386AD6BE-C81B-4188-9B8A-A3EE2D90696B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dag9_GuiCore", "Dag9_GuiCore\Dag9_GuiCore.csproj", "{386AD6BE-C81B-4188-9B8A-A3EE2D90696B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dag8_Opgave2_Aggregaterr", "Dag8_Opgave2_Aggregaterr\Dag8_Opgave2_Aggregaterr.csproj", "{56D4BF03-98C9-48CD-BD4D-E9C2EA3A4FDC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dag11 - Messaging Transformation", "Dag11 - Messaging Transformation", "{80AB0EE6-7544-4335-999B-E9E95A9DE688}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dag11_Opgave2-3_Transforming", "Dag11_Opgave2-3_Transforming\Dag11_Opgave2-3_Transforming.csproj", "{D9C17170-37B7-4998-80C2-21C5AC369199}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -317,6 +321,10 @@ Global
 		{56D4BF03-98C9-48CD-BD4D-E9C2EA3A4FDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{56D4BF03-98C9-48CD-BD4D-E9C2EA3A4FDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{56D4BF03-98C9-48CD-BD4D-E9C2EA3A4FDC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9C17170-37B7-4998-80C2-21C5AC369199}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9C17170-37B7-4998-80C2-21C5AC369199}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9C17170-37B7-4998-80C2-21C5AC369199}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9C17170-37B7-4998-80C2-21C5AC369199}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -382,6 +390,8 @@ Global
 		{FEA88280-388C-47A2-8569-03BFBB25868F} = {BE2D7487-9908-4574-8990-88CAB8117F91}
 		{386AD6BE-C81B-4188-9B8A-A3EE2D90696B} = {BE2D7487-9908-4574-8990-88CAB8117F91}
 		{56D4BF03-98C9-48CD-BD4D-E9C2EA3A4FDC} = {6025950D-2423-4C9E-9B56-86B9460125F3}
+		{80AB0EE6-7544-4335-999B-E9E95A9DE688} = {D0239DE8-51CD-40DB-A69F-A8217D4FDEAC}
+		{D9C17170-37B7-4998-80C2-21C5AC369199} = {80AB0EE6-7544-4335-999B-E9E95A9DE688}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {42778F41-63F5-4C12-8162-D381AAAA12EA}

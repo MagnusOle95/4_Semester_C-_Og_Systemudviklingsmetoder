@@ -52,6 +52,7 @@ namespace Dag8_Opgave1_xml_Splitter
 
                 int index = int.Parse(mbody.Element("Identification").Value) - 1;
 
+                //Her vil det være smart at tjekke om dette index på arrayet er tomt ellers smid det i invalid queue. ----------------------------------------
                 resequenzedList[index] = m;
             }
 
