@@ -131,6 +131,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dag11 - Messaging Transform
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dag11_Opgave2-3_Transforming", "Dag11_Opgave2-3_Transforming\Dag11_Opgave2-3_Transforming.csproj", "{D9C17170-37B7-4998-80C2-21C5AC369199}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dag11_Opgave4_AdToPattern", "Dag11_Opgave4_AdToPattern\Dag11_Opgave4_AdToPattern.csproj", "{1775C405-F631-4B70-8891-247C79A89B8F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -325,6 +327,10 @@ Global
 		{D9C17170-37B7-4998-80C2-21C5AC369199}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D9C17170-37B7-4998-80C2-21C5AC369199}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D9C17170-37B7-4998-80C2-21C5AC369199}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1775C405-F631-4B70-8891-247C79A89B8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1775C405-F631-4B70-8891-247C79A89B8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1775C405-F631-4B70-8891-247C79A89B8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1775C405-F631-4B70-8891-247C79A89B8F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -392,6 +398,7 @@ Global
 		{56D4BF03-98C9-48CD-BD4D-E9C2EA3A4FDC} = {6025950D-2423-4C9E-9B56-86B9460125F3}
 		{80AB0EE6-7544-4335-999B-E9E95A9DE688} = {D0239DE8-51CD-40DB-A69F-A8217D4FDEAC}
 		{D9C17170-37B7-4998-80C2-21C5AC369199} = {80AB0EE6-7544-4335-999B-E9E95A9DE688}
+		{1775C405-F631-4B70-8891-247C79A89B8F} = {80AB0EE6-7544-4335-999B-E9E95A9DE688}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {42778F41-63F5-4C12-8162-D381AAAA12EA}
