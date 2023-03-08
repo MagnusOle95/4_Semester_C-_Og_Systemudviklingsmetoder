@@ -19,5 +19,38 @@ namespace Dag9_DataAccessCore.Repositories
             }
         }
 
+        public static void updateMage(Mage mage)
+        {
+            using (MageContex context = new MageContex())
+            {
+                Model.Mage dataMage = context.Mages.Find(mage.MageId);
+                MageMapper.Update(mage, dataMage);
+                context.SaveChanges();
+
+            }
+        }
+
+        public static void deleteMage(Mage mage) 
+        {
+            using (MageContex context = new MageContex())
+            {
+                Model.Mage dataMage = context.Mages.Find(mage.MageId);
+                context.Mages.Remove(dataMage);
+                context.SaveChanges();
+            }
+        }
+
+        public static void addMage(Mage mage)
+        {
+            using (MageContex context = new MageContex())
+            {
+                context.Mages.Add(MageMapper.MapMage(mage));
+                context.SaveChanges();
+            }
+        }
+
+
+
+
     }
 }

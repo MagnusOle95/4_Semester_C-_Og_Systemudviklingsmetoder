@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace Dag9_DTOCore.Model
 {
-    internal class Spell
+    public class Spell
     {
+        public int SpellID { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
     }

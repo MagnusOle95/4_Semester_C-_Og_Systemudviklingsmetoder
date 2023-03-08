@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Dag9_DTOCore.Model
 {
-    public class Mage
+    public  class MageDetails
     {
-        public Mage(string name, bool isdark) 
+        public MageDetails(string name, bool isdark)
         {
             Name = name;
             IsDark = isdark;
@@ -20,3 +20,4 @@ namespace Dag9_DTOCore.Model
         //public List<Spell> Spells { get; set; }
     }
 }
+

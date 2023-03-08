@@ -7,9 +7,10 @@ using System.Threading.Tasks;
 
 namespace Dag9_DataAccessCore.Model
 {
-    [Table("Bil")]
+    [Table("Spell")]
     internal class Spell
     {
+        public int SpellID { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
 

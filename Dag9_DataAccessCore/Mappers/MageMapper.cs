@@ -1,4 +1,5 @@
-﻿using Dag9_DataAccessCore.Model;
+﻿using Dag9_DataAccessCore.Context;
+using Dag9_DataAccessCore.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,8 +12,22 @@ namespace Dag9_DataAccessCore.Mappers
     {
         public static Dag9_DTOCore.Model.Mage MapMage(Mage mage)
         {
-            return new Dag9_DTOCore.Model.Mage (mage.MageId,mage.Name,mage.IsDark);
+            Dag9_DTOCore.Model.Mage tempMage = new Dag9_DTOCore.Model.Mage(mage.Name, mage.IsDark);
+            tempMage.MageId = mage.MageId;
+            return tempMage;
+        }
 
+        public static Mage MapMage(Dag9_DTOCore.Model.Mage mage)
+        {
+            Mage tempMage = new Mage(mage.Name, mage.IsDark);
+            tempMage.MageId = mage.MageId;
+            return tempMage;
+        }
+
+        internal static void Update(Dag9_DTOCore.Model.Mage mage, Mage dataMage)
+        {
+            dataMage.Name= mage.Name;
+            dataMage.IsDark = mage.IsDark;
         }
         
     }

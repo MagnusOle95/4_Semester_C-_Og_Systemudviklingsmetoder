@@ -15,5 +15,19 @@ namespace Dag9_BusinessLogicCore.BLL
             return MageRepositories.getMage(id);
         }
 
+        public void updateMage(Mage mage)
+        {
+            MageRepositories.updateMage(mage);
+        }
+
+        public void deleteMage(Mage mage) 
+        {
+            MageRepositories.deleteMage(mage);
+        }
+
+        public void addMage(Mage mage)
+        {
+            MageRepositories.addMage(mage);
+        }
     }
 }
