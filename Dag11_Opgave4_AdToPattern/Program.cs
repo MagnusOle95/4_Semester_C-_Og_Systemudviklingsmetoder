@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 
-namespace Dag11_Opgave4_AdToPattern
+namespace Dag11_Opgave4_enricher
 {
     internal class Program
     {
