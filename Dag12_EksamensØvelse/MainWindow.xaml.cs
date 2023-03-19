@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Dag6_Opgave6_Dockpanel
+namespace Dag12_EksamensØvelse
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -23,18 +23,6 @@ namespace Dag6_Opgave6_Dockpanel
         public MainWindow()
         {
             InitializeComponent();
-            bNord.Click += b_Click;
-            bSyd.Click += b_Click;
-            bOest.Click += b_Click;
-            bVest.Click += b_Click;
         }
-
-        private void b_Click(object sender, RoutedEventArgs e)
-        {
-
-            tCenter.Text += "\n" + ((Button)sender).Content;
-        }
-
-        
     }
 }

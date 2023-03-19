@@ -1,0 +1,46 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>MageView</title>
+
+</head>
+<body>
+    @using (Html.BeginForm("GetMage", "Mage"))
+        {
+        <p>
+                @Html.Label("ID:") <br />
+                @Html.TextBox("ID")
+        </p>
+         <p>
+         <input type="submit" value="Søg:">
+         </p>
+        }
+
+    @using (Html.BeginForm("updateMage", "Mage"))
+    {
+        <p>
+                @Html.Label("Navn:") <br />
+                @Html.TextBox("Name")
+                
+        </p>
+
+        <p>
+                @Html.Label("Is Dark:") <br />
+                @Html.TextBox("IsDark")
+        </p>
+         <p>
+         <input type="submit" value="Opdater:">
+         </p>
+
+    }
+        
+    
+</body>
+</html>

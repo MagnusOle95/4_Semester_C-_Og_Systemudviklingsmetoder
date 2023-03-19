@@ -28,25 +28,27 @@ namespace Dag9_GuiCore
         }
 
         MageBll bll = new MageBll();
-        Mage tempMage;
+        Mage TempMage;
 
         private void bSeach_Click(object sender, RoutedEventArgs e)
         {
             Mage tempMage = bll.GetMage(Int32.Parse(txfSeachId.Text));
+            TempMage = tempMage;
             tbName.Text= tempMage.Name;
             tbIsDark.Text =tempMage.IsDark.ToString();
+            
         }
 
         private void bUpdate_Click_1(object sender, RoutedEventArgs e)
         {
-            tempMage.Name = tbName.Text;
-            tempMage.IsDark = bool.Parse(tbIsDark.Text);
-            bll.updateMage(tempMage);
+            TempMage.Name = tbName.Text;
+            TempMage.IsDark = bool.Parse(tbIsDark.Text);
+            bll.updateMage(TempMage);
         }
 
         private void bDelete_Click(object sender, RoutedEventArgs e)
         {
-            bll.deleteMage(tempMage);
+            bll.deleteMage(TempMage);
         }
 
         private void bAdd_Click(object sender, RoutedEventArgs e)

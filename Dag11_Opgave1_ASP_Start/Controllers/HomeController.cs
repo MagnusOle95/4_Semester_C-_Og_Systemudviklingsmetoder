@@ -15,7 +15,7 @@ namespace Dag11_Opgave1_ASP_Start.Controllers
 
         public string Index()
         {
-            return "Lasse er en abe";
+            return "hej :D";
         }
 
         public IActionResult index2()
