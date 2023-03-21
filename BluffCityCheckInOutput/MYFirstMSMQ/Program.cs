@@ -4,7 +4,7 @@ using System.Linq;
 using System.Xml.Linq;
 using System.Messaging;
 
-namespace MYFirstMSMQ
+namespace BluffCityReceiver
 {
     class Program
     {
