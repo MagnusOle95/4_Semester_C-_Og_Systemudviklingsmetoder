@@ -13,7 +13,7 @@ namespace dag15_Opgave1_Splitter_Med_Transactional_Client
         static void Main(string[] args)
         {
 
-            //Opretter kør. 
+            //Opretter transaktionskør kør. 
             //MessageQueue.Create(@".\Private$\AirportCheckInOutput");
             //MessageQueue.Create(@".\Private$\LuggageQueue",true);
             //MessageQueue.Create(@".\Private$\PassengerQueue",true);

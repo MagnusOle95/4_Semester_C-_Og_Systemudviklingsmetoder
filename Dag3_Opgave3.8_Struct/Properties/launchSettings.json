@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "Dag3_Opgave3.8_Struct": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:59384;http://localhost:59391"
+    }
+  }
+}

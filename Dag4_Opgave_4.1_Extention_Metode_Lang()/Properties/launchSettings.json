@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "Dag4_Opgave_4.1_Extention_Metode_Lang()": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:59402;http://localhost:59403"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "Dag9_DTOCore": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:59440;http://localhost:59441"
+    }
+  }
+}

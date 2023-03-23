@@ -1,0 +1,53 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Countries</h1>
+
+@using (Html.BeginForm("Index", "Home", FormMethod.Get))
+{
+    <div>
+        @Html.DropDownList("Countries", "-- Select a country --")
+        <input type ="submit" name=" = showName" value=" Show country code" /> <br />
+    </div>
+
+    <Div>
+        @if (ViewBag.CountryCode != null) {
+            <strong>Country code: </strong>@ViewBag.CountryCode <br/>
+         }
+
+    </Div>
+}
+
+@using (Html.BeginForm("Index", "Home", FormMethod.Post))
+{
+    <div>
+        @Html.Label("country:")
+    </div>
+    <div>
+        @Html.TextBox("tbCountry")
+    </div>
+    <div>
+        @Html.Label("Code:")
+    </div>
+    <div>
+        @Html.TextBox("tbCode") <br/>
+    </div>
+    <div>
+        <input type ="submit" name=" = btnAdd" value=" Add:" /> <br />
+    </div>
+}
+   
+
+
+@*Kan også gøres med en loop ses neden under. *@
+@*<div>
+    <select id="countries" name="countries">
+        @foreach (SelectListItem li in ViewBag.Countries)
+        {
+    <option value="@li.Value"> @li.Text</option>
+        } 
+</select>
+</div>*@
+

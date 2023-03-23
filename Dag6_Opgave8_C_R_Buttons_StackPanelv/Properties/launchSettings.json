@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "Dag6_Opgave8_C_R_Buttons_StackPanelv": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:59424;http://localhost:59425"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "Dag4_Opgave4.5_spillekort_Enum": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:59396;http://localhost:59397"
+    }
+  }
+}

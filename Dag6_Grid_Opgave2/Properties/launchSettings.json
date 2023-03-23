@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "Dag6_Grid_Opgave2": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:59422;http://localhost:59423"
+    }
+  }
+}

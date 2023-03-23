@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "Dag4_Opgave4.2B_Delegate_eventsOgListeners": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:59387;http://localhost:59392"
+    }
+  }
+}

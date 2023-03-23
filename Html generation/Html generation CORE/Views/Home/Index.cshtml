@@ -1,0 +1,48 @@
+﻿@model Html_generation_CORE.Models.Person
+@{
+    Layout = null;
+}
+@{
+    ViewBag.Title = "Index";
+}
+
+@Html.BeginForm("Klik", "Home")
+
+<p>
+    Html helpers
+</p>
+
+@Html.TextBox("Fornanv")
+@Html.TextBoxFor(p => p.Fornavn)
+@Html.TextBoxFor(m => m.Alder)
+
+
+<p>
+    editors
+</p>
+@Html.Editor("Fornavn")
+<br />
+@Html.Editor("Alder")
+<br />
+@Html.Editor("Dato")
+<br />
+@Html.EditorFor(m => m.Value)
+<br />
+@Html.DropDownListFor(m => m.Value, new SelectList(Enum.GetValues(typeof(Html_generation_CORE.Models.Values))))
+<br />
+@Html.ListBoxFor(m => m.Graass, new SelectList(Enum.GetValues(typeof(Html_generation_CORE.Models.Values))))
+<br />
+@Html.DropDownListFor(m => m.Value, Html.GetEnumSelectList(typeof(Values)))
+<br />
+@Html.EditorFor(m => m.rigtigt)
+<br />
+@Html.EditorFor(m => m.email)
+<p>
+    editor for model
+</p>
+@Html.EditorForModel()
+<input type="submit" value="Klik" />
+@{Html.EndForm(); }
+
+<h2>Index</h2>
+

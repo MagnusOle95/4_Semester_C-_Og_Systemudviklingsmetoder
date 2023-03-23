@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "Dag7_Opgave4_ObservableCollection": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:59426;http://localhost:59427"
+    }
+  }
+}

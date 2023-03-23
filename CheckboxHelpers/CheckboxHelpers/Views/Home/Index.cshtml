@@ -1,0 +1,23 @@
+﻿
+
+<h2>Index</h2>
+
+@using (Html.BeginForm("Postback", "Home"))
+{
+    @Html.CheckBox("Check1", true)
+    @Html.CheckBox("Check2", true)
+    @Html.CheckBox("Check3", false)
+
+
+    <input type="submit" value="klik" />
+}
+
+@using (Html.BeginForm("Postback2", "Home"))
+{
+    @Html.CheckBox("Choices", false, new { value = "Choice1" })
+    @Html.CheckBox("Choices", true, new { value = "Choice2" })
+    @Html.CheckBox("Choices", false, new { value = "Choice3" })
+    @Html.CheckBox("Choices", false, new { value = "Choice4" })
+
+    <input type="submit" value="klik" />
+}

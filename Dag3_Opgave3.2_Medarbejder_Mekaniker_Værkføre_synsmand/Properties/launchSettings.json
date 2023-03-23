@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "Dag3_Opgave3.2_Medarbejder_Mekaniker_Værkføre_synsmand": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:59404;http://localhost:59405"
+    }
+  }
+}

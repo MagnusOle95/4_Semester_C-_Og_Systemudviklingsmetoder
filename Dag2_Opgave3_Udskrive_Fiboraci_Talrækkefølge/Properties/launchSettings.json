@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "Dag2_Opgave3_Udskrive_Fiboraci_Talrækkefølge": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:59388;http://localhost:59395"
+    }
+  }
+}

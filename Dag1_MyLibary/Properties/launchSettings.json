@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "Dag1_MyLibary": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:59389;http://localhost:59394"
+    }
+  }
+}

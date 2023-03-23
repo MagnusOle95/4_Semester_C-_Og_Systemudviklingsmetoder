@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "Dag6_Opgave7_Grid_Statusbar_Menubar": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:59418;http://localhost:59420"
+    }
+  }
+}
