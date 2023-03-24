@@ -51,9 +51,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Dag16_Patterns_.Net_Framework\Dag16_Patterns_Net_framework.csproj">
-      <Project>{a39229ca-b550-4b91-9fc0-c413721f5626}</Project>
-      <Name>Dag16_Patterns_Net_framework</Name>
+    <ProjectReference Include="..\Dag16_PatternLibary\Dag16_PatternLibary.csproj">
+      <Project>{54dc5207-f36a-43e0-94dc-2034e7799e0d}</Project>
+      <Name>Dag16_PatternLibary</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

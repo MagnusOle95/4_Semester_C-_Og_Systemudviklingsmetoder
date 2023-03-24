@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A39229CA-B550-4B91-9FC0-C413721F5626}</ProjectGuid>
+    <ProjectGuid>{54DC5207-F36A-43E0-94DC-2034E7799E0D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Dag16_Patterns_Net_Framework</RootNamespace>
-    <AssemblyName>Dag16_Patterns_Net_Framework</AssemblyName>
+    <RootNamespace>Dag16_PatternLibary</RootNamespace>
+    <AssemblyName>Dag16_PatternLibary</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -46,7 +46,6 @@
     <Compile Include="FilterATCFormat.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PublicSub1.cs" />
-    <Compile Include="testr22.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
