@@ -43,7 +43,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Api_weather.cs" />
+    <Compile Include="FilterAICFormat.cs" />
+    <Compile Include="FilterAirlineCompFormat.cs" />
     <Compile Include="FilterATCFormat.cs" />
+    <Compile Include="FilterWeatherFormat.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PublicSub1.cs" />
   </ItemGroup>

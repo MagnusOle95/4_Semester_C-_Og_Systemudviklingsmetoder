@@ -23,13 +23,10 @@ namespace Dag16_PatternLibary
             MessageQueue mq = (MessageQueue)source;
             Message message = mq.EndReceive(asyncResult.AsyncResult); //let me confus u
 
-            //foreach(MessageQueue outQueue in OutQueues)
-            //{
-            //    outQueue.Send(message);
-            //}
-            OutQueues[0].Send(message);
-            OutQueues[1].Send(message);
-            OutQueues[2].Send(message);
+            foreach (MessageQueue outQueue in OutQueues)
+            {
+                outQueue.Send(message);
+            }
 
 
             mq.BeginReceive();

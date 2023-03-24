@@ -9,12 +9,12 @@ using System.Xml.Linq;
 
 namespace Dag16_PatternLibary
 {
-    public class FilterATCFormat
+    public class FilterAirlineCompFormat
     {
         protected MessageQueue InQueue;
         protected MessageQueue OutQueue;
 
-        public FilterATCFormat(MessageQueue inQueue, MessageQueue outQueue)
+        public FilterAirlineCompFormat(MessageQueue inQueue, MessageQueue outQueue)
         {
             inQueue.ReceiveCompleted += new ReceiveCompletedEventHandler(OnMessage);
             inQueue.BeginReceive();
@@ -35,8 +35,18 @@ namespace Dag16_PatternLibary
             //Fjerne de ting der ikke skal sendes med videre. 
             XElement sun = body.Element("sun");
             sun.Remove();
+            XElement coordinates = body.Element("coord");
+            coordinates.Remove();
+            XElement humidity = body.Element("humidity");
+            humidity.Remove();
+            XElement pressure = body.Element("pressure");
+            pressure.Remove();
+            XElement wind = body.Element("wind");
+            wind.Remove();
+            XElement visibility = body.Element("visibility");
+            visibility.Remove();
 
-            //Udskriver så de kan ses. 
+            //Udskriver så de kan ses og sender ud i outQueue.  
             Console.WriteLine("ATC Format !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
             Console.WriteLine(body);
 
