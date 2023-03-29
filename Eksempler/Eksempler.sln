@@ -1,0 +1,45 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32014.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PublishScripts", "PublishScripts", "{5D798272-9FC8-400C-A9F7-69BF77008662}"
+	ProjectSection(SolutionItems) = preProject
+		PublishScripts\AzureWebsitePublishModule.psm1 = PublishScripts\AzureWebsitePublishModule.psm1
+		PublishScripts\Publish-WebApplicationWebsite.ps1 = PublishScripts\Publish-WebApplicationWebsite.ps1
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Configurations", "Configurations", "{377C089E-24B0-4B1C-A08D-D0FE6EFB7B3B}"
+	ProjectSection(SolutionItems) = preProject
+		PublishScripts\Configurations\RouteTests-WAWS-dev.json = PublishScripts\Configurations\RouteTests-WAWS-dev.json
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModelBindingCore", "ModelBindingCore\ModelBindingCore.csproj", "{C5A30A76-70A7-4B26-8F2C-4F15695AB083}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RouteTestsCore", "RouteTestsCore\RouteTestsCore.csproj", "{3DBEA716-D9E3-4BD0-BC02-AF20B070B566}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C5A30A76-70A7-4B26-8F2C-4F15695AB083}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5A30A76-70A7-4B26-8F2C-4F15695AB083}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5A30A76-70A7-4B26-8F2C-4F15695AB083}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5A30A76-70A7-4B26-8F2C-4F15695AB083}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DBEA716-D9E3-4BD0-BC02-AF20B070B566}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DBEA716-D9E3-4BD0-BC02-AF20B070B566}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DBEA716-D9E3-4BD0-BC02-AF20B070B566}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DBEA716-D9E3-4BD0-BC02-AF20B070B566}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{377C089E-24B0-4B1C-A08D-D0FE6EFB7B3B} = {5D798272-9FC8-400C-A9F7-69BF77008662}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C9F7FE16-5607-443D-B893-E84F189766B3}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,38 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    
+</head>
+<body>
+    <div> 
+        <br />
+
+        <br />
+        Go to book info: @Html.ActionLink("page link 0, no id - using defaults", "Books", "Shop")
+        <br />
+        @* Not the recommend way in the first link below, but just to show that it
+            is in fact possible to do it like this *@
+        Go to book info: @Html.ActionLink("page link 1, id hardcoded", "Books/11", "Shop")
+        <br />
+        @* Here we create a link to the the Shop Controller and the Books Action Method, with parameter id = 12 *@
+        Go to book info: @Html.ActionLink("page link 2, id as variable ", "Books", "Shop", new { id = 12 },null)
+        <br />
+        @* Here we create a link to the the Shop Controller and the Books Action Method,
+             with parameter id = 13, and category = crime *@
+
+
+        Go to book info: @Html.ActionLink("page link 3, id and category", "Books", "Shop", new { id = 13, category = "crime" }, null)
+       
+        
+         <br />
+    </div>
+</body>
+</html>

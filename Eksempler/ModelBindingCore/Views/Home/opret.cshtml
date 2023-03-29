@@ -1,0 +1,17 @@
+﻿@model ModelBinding.Models.Person
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@using (Html.BeginForm())
+{
+
+    //@Html.EditorForModel();
+    @Html.EditorFor(model => model.Fornavn)
+    @Html.EditorFor(model => model.Efternavn)
+    @Html.EditorFor(model => model.Alder)
+    <input type="submit" value="Gem" />
+}

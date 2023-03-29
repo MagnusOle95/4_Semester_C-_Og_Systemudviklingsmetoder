@@ -1,0 +1,25 @@
+﻿@using RouteTests.Models
+
+@model Book
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>FullBook</title>
+</head>
+<body>
+    <div> 
+        @Html.BeginForm() {
+        Indtast:
+            @Html.EditorForModel()
+            <input type="submit" value="Klik" />   
+        }
+    </div>
+</body>
+</html>

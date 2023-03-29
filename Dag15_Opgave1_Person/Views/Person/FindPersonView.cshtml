@@ -1,0 +1,24 @@
+﻿@model Dag15_Opgave1_Person.Models.Person
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@using (Html.BeginForm())
+{
+
+    //@Html.EditorForModel();
+    @*@Html.EditorFor(model => model.ForNavn)
+    @Html.EditorFor(model => model.EfterNavn)*@
+    <p>
+        Fornavn: @Model.ForNavn
+    </p>
+    <p>
+        Efternavn: @Model.EfterNavn
+    </p>
+ 
+
+       
+}
