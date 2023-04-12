@@ -28,8 +28,6 @@ namespace Dag16_Opgave2_Partial_view_og_View_component.Controllers
             return View(p);
         }
 
-        //Test 123
-
 
     }
 }
