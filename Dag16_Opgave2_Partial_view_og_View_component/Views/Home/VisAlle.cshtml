@@ -1,0 +1,14 @@
+﻿
+@{
+    ViewData["Title"] = "VisAlle";
+}
+
+<h1>VisAlle</h1>
+
+
+@foreach (var p in ViewBag.liste)
+{
+    <p>
+    @p.Name  @p.Age
+    </p>
+}
