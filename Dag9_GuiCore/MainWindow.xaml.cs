@@ -21,11 +21,12 @@ namespace Dag9_GuiCore
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
+
     {
         public MainWindow()
         {
             InitializeComponent();
-
+            lbMages.SelectionChanged += ListBox_SelectionChanged;
             //Sætter alle mages.
             updateMageList();
 
@@ -85,6 +86,25 @@ namespace Dag9_GuiCore
                 lbSpells.Items.Add(s);
             }
         }
+
+        private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            //Her finder jeg id,en. 
+            var listBox = (ListBox)sender;
+            var selectedItem = listBox.SelectedItem;
+            string s = selectedItem.ToString();
+            string[] stringSplit = s.Split();
+
+            //Samme kode som i søg. 
+            Mage tempMage = bll.GetMage(Int32.Parse(stringSplit[1]));
+            TempMage = tempMage;
+            tbName.Text = tempMage.Name;
+            tbIsDark.Text = tempMage.IsDark.ToString();
+
+            updateMageSpellList(tempMage.MageId);
+        }
+
+
 
 
     }

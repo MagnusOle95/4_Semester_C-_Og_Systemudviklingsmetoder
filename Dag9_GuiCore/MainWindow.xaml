@@ -17,7 +17,7 @@
         <Button x:Name="bUpdate" Content="Update" HorizontalAlignment="Left" Margin="270,164,0,0" VerticalAlignment="Top" Height="33" Width="72" Click="bUpdate_Click_1"/>
         <Button x:Name="bDelete" Content="Slet" HorizontalAlignment="Left" Margin="270,243,0,0" VerticalAlignment="Top" Height="33" Width="72" Click="bDelete_Click"/>
         <Button x:Name="bAdd" Content="Tilføj" HorizontalAlignment="Left" Margin="270,203,0,0" VerticalAlignment="Top" Height="33" Width="72" Click="bAdd_Click"/>
-        <ListBox x:Name="lbSpells" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="434,86,238,225"/>
+        <ListBox x:Name="lbSpells" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="434,86,167,225"/>
         <TextBlock x:Name="txfSpells" Margin="434,69,0,0" TextWrapping="Wrap" Text="Spells:" VerticalAlignment="Top" HorizontalAlignment="Left" Width="54"/>
         <ListBox x:Name="lbMages" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="54,78,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Height="176" Width="160"/>
         <TextBlock x:Name="txfMages" TextWrapping="Wrap" Text="Mages:" Margin="55,61,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
