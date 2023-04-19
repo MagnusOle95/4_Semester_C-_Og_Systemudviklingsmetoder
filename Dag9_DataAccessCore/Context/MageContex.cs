@@ -38,9 +38,16 @@ namespace Dag9_DataAccessCore.Context
                 new Mage{MageId=-1,Name="Elvira", IsDark=true},
                 new Mage{MageId=-2,Name="Kenny", IsDark=false},
             });
+            modelBuilder.Entity<Magespell>().HasData(new Magespell[] {
+                new Magespell{MagespellId = -1, MageId = -1, SpellId = -1},
+                new Magespell{MagespellId = -2, MageId = -1, SpellId = -2}
+
+            });
         }
         public DbSet<Mage> Mages { get; set; }
         public DbSet<Spell> Spells { get; set; }
+        public DbSet<Magespell> Magespells { get; set; }
+
     }
 
 }

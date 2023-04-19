@@ -8,11 +8,13 @@ using System.Threading.Tasks;
 namespace Dag9_DataAccessCore.Model
 {
     [Table("Mage")]
-    internal class Mage
+    public class Mage
     {
         public int MageId { get; set; }
         public string Name { get; set; }
         public bool IsDark { get; set; }
+
+        public virtual ICollection<Magespell> MageSpells { get; set; }
 
         //private List<Spell> spells;
         //public virtual List<Spell> Spells { get { return spells; } }
@@ -27,9 +29,9 @@ namespace Dag9_DataAccessCore.Model
             this.IsDark = isDark;
         }
 
-        //public void AddSpell(Spell spell) 
+        //public void AddSpell(Spell spell)
         //{
-        //    spells.Add(spell);
+        //    Spells.Add(spell);
         //}
 
     }
