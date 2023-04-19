@@ -29,6 +29,13 @@ namespace Dag9_DataAccessCore.Mappers
             dataMage.Name= mage.Name;
             dataMage.IsDark = mage.IsDark;
         }
-        
+
+        public static Dag9_DTOCore.Model.Spell spellMapper(Spell spell)
+        {
+            Dag9_DTOCore.Model.Spell tempSpell = new Dag9_DTOCore.Model.Spell(spell.Name, spell.Description);
+            tempSpell.SpellID = spell.SpellID;
+            return tempSpell;
+        }
+
     }
 }

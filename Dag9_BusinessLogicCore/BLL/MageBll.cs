@@ -29,5 +29,16 @@ namespace Dag9_BusinessLogicCore.BLL
         {
             MageRepositories.addMage(mage);
         }
+
+        public List<Mage> getMages()
+        {
+            return MageRepositories.getMages();
+        }
+
+
+        public List<Spell> getMageSpells(int id) 
+        {
+            return MageRepositories.getMageSpells(id);
+        }
     }
 }

@@ -25,6 +25,10 @@ namespace Dag9_GuiCore
         public MainWindow()
         {
             InitializeComponent();
+
+            //Sætter alle mages.
+            updateMageList();
+
         }
 
         MageBll bll = new MageBll();
@@ -36,7 +40,9 @@ namespace Dag9_GuiCore
             TempMage = tempMage;
             tbName.Text= tempMage.Name;
             tbIsDark.Text =tempMage.IsDark.ToString();
-            
+
+            updateMageSpellList(tempMage.MageId);
+
         }
 
         private void bUpdate_Click_1(object sender, RoutedEventArgs e)
@@ -44,18 +50,43 @@ namespace Dag9_GuiCore
             TempMage.Name = tbName.Text;
             TempMage.IsDark = bool.Parse(tbIsDark.Text);
             bll.updateMage(TempMage);
+            updateMageList();
         }
 
         private void bDelete_Click(object sender, RoutedEventArgs e)
         {
             bll.deleteMage(TempMage);
+            updateMageList();
         }
 
         private void bAdd_Click(object sender, RoutedEventArgs e)
         {
             Mage mage = new Mage(tbName.Text, Boolean.Parse(tbIsDark.Text));
             bll.addMage(mage);
+            updateMageList();
         }
+
+        public void updateMageList()
+        {
+            lbMages.Items.Clear();
+            List<Mage> mageList = bll.getMages();
+            foreach (Mage m in mageList)
+            {
+                lbMages.Items.Add(m);
+            }
+        }
+
+        public void updateMageSpellList(int id)
+        {
+            lbSpells.Items.Clear();
+            List<Spell> MageSpellList = bll.getMageSpells(id);
+            foreach (Spell s in MageSpellList)
+            {
+                lbSpells.Items.Add(s);
+            }
+        }
+
+
     }
 }
 

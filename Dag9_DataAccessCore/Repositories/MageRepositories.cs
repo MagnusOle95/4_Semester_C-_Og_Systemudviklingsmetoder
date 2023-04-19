@@ -49,6 +49,43 @@ namespace Dag9_DataAccessCore.Repositories
             }
         }
 
+        public static List<Mage> getMages()
+        {
+            List<Mage> outList = new List<Mage>();
+
+            using (MageContex context = new MageContex())
+            {
+                foreach(var item in context.Mages)
+                {
+                    outList.Add(MageMapper.MapMage(item));
+                }
+            }
+            return outList;
+        }
+
+        public static List<Spell> getMageSpells(int id)
+        {
+            List<int> tempMageSpellIDlist = new List<int>();
+            List<Spell> spells = new List<Spell>();
+
+            using (MageContex context = new MageContex())
+            {
+                foreach (var item in context.Magespells)
+                {
+                    if(item.MageId == id)
+                    {
+                        tempMageSpellIDlist.Add(item.SpellId);
+                    }
+                }
+
+                foreach (int t in tempMageSpellIDlist)
+                {
+                    spells.Add(MageMapper.spellMapper(context.Spells.Find(t)));
+                }
+            }
+            return spells;
+        }
+
 
 
 

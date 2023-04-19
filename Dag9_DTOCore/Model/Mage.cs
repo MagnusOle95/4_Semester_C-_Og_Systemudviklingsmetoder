@@ -8,7 +8,7 @@ namespace Dag9_DTOCore.Model
 {
     public class Mage
     {
-        public Mage(string name, bool isdark) 
+        public Mage(string name, bool isdark)
         {
             Name = name;
             IsDark = isdark;
@@ -17,6 +17,12 @@ namespace Dag9_DTOCore.Model
         public int MageId { get; set; }
         public string Name { get; set; }
         public bool IsDark { get; set; }
-        //public List<Spell> Spells { get; set; }
+        //public List<Spell> Spells { get; set;
+        //
+        public override string ToString()
+        {
+            return "ID: " + MageId + " Navn: " + Name;
+        }
+
     }
 }

@@ -5,20 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Dag9_GuiCore"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="462" Width="800">
     <Grid>
-        <Button x:Name="bSeach" Content="Søg:" HorizontalAlignment="Left" Margin="90,132,0,0" VerticalAlignment="Top" Height="56" Width="96" Click="bSeach_Click"/>
-        <TextBox x:Name="txfSeachId" HorizontalAlignment="Left" Margin="82,96,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <TextBlock x:Name="txb" HorizontalAlignment="Left" Margin="117,61,0,0" TextWrapping="Wrap" Text="ID:" VerticalAlignment="Top"/>
-        <TextBox x:Name="tbName" HorizontalAlignment="Left" Margin="296,96,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="tbIsDark" HorizontalAlignment="Left" Margin="296,132,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <TextBlock x:Name="txfNavn" HorizontalAlignment="Left" Margin="254,98,0,0" TextWrapping="Wrap" Text="Navn:" VerticalAlignment="Top" RenderTransformOrigin="-0.211,1.373"/>
-        <TextBlock x:Name="txfIsDark" HorizontalAlignment="Left" Margin="254,132,0,0" TextWrapping="Wrap" Text="Is dark:" VerticalAlignment="Top" RenderTransformOrigin="-0.211,1.373"/>
-        <Button x:Name="bUpdate" Content="Update" HorizontalAlignment="Left" Margin="311,160,0,0" VerticalAlignment="Top" Height="33" Width="72" Click="bUpdate_Click_1"/>
-        <Button x:Name="bDelete" Content="Slet" HorizontalAlignment="Left" Margin="90,212,0,0" VerticalAlignment="Top" Height="38" Width="104" Click="bDelete_Click"/>
-        <Button x:Name="bAdd" Content="Tilføj" HorizontalAlignment="Left" Margin="311,205,0,0" VerticalAlignment="Top" Height="43" Width="72" Click="bAdd_Click"/>
-        <ListBox x:Name="lbSpells" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="469,127,203,184"/>
-        <TextBlock x:Name="txfSpells" HorizontalAlignment="Left" Margin="479,101,0,0" TextWrapping="Wrap" Text="Spells:" VerticalAlignment="Top" Width="54"/>
+        <Button x:Name="bSeach" Content="Søg:" HorizontalAlignment="Left" Margin="54,303,0,0" VerticalAlignment="Top" Height="42" Width="72" Click="bSeach_Click"/>
+        <TextBox x:Name="txfSeachId" HorizontalAlignment="Left" Margin="76,273,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="100"/>
+        <TextBlock x:Name="txb" HorizontalAlignment="Left" Margin="54,273,0,0" TextWrapping="Wrap" Text="ID:" VerticalAlignment="Top"/>
+        <TextBox x:Name="tbName" HorizontalAlignment="Left" Margin="270,85,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="tbIsDark" HorizontalAlignment="Left" Margin="270,135,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Height="19"/>
+        <TextBlock x:Name="txfNavn" HorizontalAlignment="Left" Margin="270,69,0,0" TextWrapping="Wrap" Text="Navn:" VerticalAlignment="Top" RenderTransformOrigin="-0.211,1.373"/>
+        <TextBlock x:Name="txfIsDark" HorizontalAlignment="Left" Margin="270,117,0,0" TextWrapping="Wrap" Text="Is dark:" VerticalAlignment="Top" RenderTransformOrigin="-0.211,1.373"/>
+        <Button x:Name="bUpdate" Content="Update" HorizontalAlignment="Left" Margin="270,164,0,0" VerticalAlignment="Top" Height="33" Width="72" Click="bUpdate_Click_1"/>
+        <Button x:Name="bDelete" Content="Slet" HorizontalAlignment="Left" Margin="270,243,0,0" VerticalAlignment="Top" Height="33" Width="72" Click="bDelete_Click"/>
+        <Button x:Name="bAdd" Content="Tilføj" HorizontalAlignment="Left" Margin="270,203,0,0" VerticalAlignment="Top" Height="33" Width="72" Click="bAdd_Click"/>
+        <ListBox x:Name="lbSpells" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="434,86,238,225"/>
+        <TextBlock x:Name="txfSpells" Margin="434,69,0,0" TextWrapping="Wrap" Text="Spells:" VerticalAlignment="Top" HorizontalAlignment="Left" Width="54"/>
+        <ListBox x:Name="lbMages" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="54,78,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Height="176" Width="160"/>
+        <TextBlock x:Name="txfMages" TextWrapping="Wrap" Text="Mages:" Margin="55,61,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
 
     </Grid>
 </Window>
