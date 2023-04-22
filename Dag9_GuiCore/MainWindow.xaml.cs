@@ -102,6 +102,8 @@ namespace Dag9_GuiCore
             tbIsDark.Text = tempMage.IsDark.ToString();
 
             updateMageSpellList(tempMage.MageId);
+
+            //Dette fjernes. 
         }
 
 
