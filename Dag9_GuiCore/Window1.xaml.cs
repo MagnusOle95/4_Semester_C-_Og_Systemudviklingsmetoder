@@ -23,5 +23,11 @@ namespace Dag9_GuiCore
         {
             InitializeComponent();
         }
+
+        private void bOk_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
+
 }

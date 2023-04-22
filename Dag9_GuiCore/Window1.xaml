@@ -9,7 +9,7 @@
     <Grid>
         <TextBlock x:Name="lLeanedSpells" HorizontalAlignment="Left" Margin="39,48,0,0" TextWrapping="Wrap" Text="Lærte spells:" VerticalAlignment="Top" Height="37" Width="123" FontSize="20"/>
         <TextBlock x:Name="AllUnleanedSpells" HorizontalAlignment="Left" Margin="320,48,0,0" TextWrapping="Wrap" Text="Ikke lærte spells:" VerticalAlignment="Top" Height="37" Width="180" FontSize="20"/>
-        <Button x:Name="bOk" Content="OK" HorizontalAlignment="Left" Margin="506,320,0,0" VerticalAlignment="Top" Height="54" Width="84" FontSize="25"/>
+        <Button x:Name="bOk" Content="OK" HorizontalAlignment="Left" Margin="456,302,0,0" VerticalAlignment="Top" Height="46" Width="64" FontSize="25" Click="bOk_Click"/>
         <ListBox d:ItemsSource="{d:SampleData ItemCount=5}" Margin="39,90,361,107"/>
         <ListBox d:ItemsSource="{d:SampleData ItemCount=5}" Margin="320,90,80,107"/>
         <Button Content="→" HorizontalAlignment="Left" Margin="259,102,0,0" VerticalAlignment="Top" Height="29" Width="41"/>
