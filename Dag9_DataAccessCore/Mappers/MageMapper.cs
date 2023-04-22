@@ -12,9 +12,16 @@ namespace Dag9_DataAccessCore.Mappers
     {
         public static Dag9_DTOCore.Model.Mage MapMage(Mage mage)
         {
-            Dag9_DTOCore.Model.Mage tempMage = new Dag9_DTOCore.Model.Mage(mage.Name, mage.IsDark);
-            tempMage.MageId = mage.MageId;
-            return tempMage;
+            if (mage != null)
+            {
+                Dag9_DTOCore.Model.Mage tempMage = new Dag9_DTOCore.Model.Mage(mage.Name, mage.IsDark);
+                tempMage.MageId = mage.MageId;
+                return tempMage;
+            }
+            else
+            {
+                return null;
+            }
         }
 
         public static Mage MapMage(Dag9_DTOCore.Model.Mage mage)

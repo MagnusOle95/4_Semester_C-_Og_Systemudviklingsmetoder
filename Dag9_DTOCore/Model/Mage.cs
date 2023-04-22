@@ -17,8 +17,7 @@ namespace Dag9_DTOCore.Model
         public int MageId { get; set; }
         public string Name { get; set; }
         public bool IsDark { get; set; }
-        //public List<Spell> Spells { get; set;
-        //
+        public virtual ICollection<MageSpell> MageSpells { get; set; }
         public override string ToString()
         {
             return "ID: " + MageId + " Navn: " + Name;

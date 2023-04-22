@@ -1,0 +1,18 @@
+﻿<Window x:Class="Dag9_GuiCore.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Dag9_GuiCore"
+        mc:Ignorable="d"
+        Title="Window1" Height="400" Width="600">
+    <Grid>
+        <TextBlock x:Name="lLeanedSpells" HorizontalAlignment="Left" Margin="39,48,0,0" TextWrapping="Wrap" Text="Lærte spells:" VerticalAlignment="Top" Height="37" Width="123" FontSize="20"/>
+        <TextBlock x:Name="AllUnleanedSpells" HorizontalAlignment="Left" Margin="320,48,0,0" TextWrapping="Wrap" Text="Ikke lærte spells:" VerticalAlignment="Top" Height="37" Width="180" FontSize="20"/>
+        <Button x:Name="bOk" Content="OK" HorizontalAlignment="Left" Margin="506,320,0,0" VerticalAlignment="Top" Height="54" Width="84" FontSize="25"/>
+        <ListBox d:ItemsSource="{d:SampleData ItemCount=5}" Margin="39,90,361,107"/>
+        <ListBox d:ItemsSource="{d:SampleData ItemCount=5}" Margin="320,90,80,107"/>
+        <Button Content="→" HorizontalAlignment="Left" Margin="259,102,0,0" VerticalAlignment="Top" Height="29" Width="41"/>
+        <Button Content="←" HorizontalAlignment="Left" Margin="259,155,0,0" VerticalAlignment="Top" Height="29" Width="41"/>
+    </Grid>
+</Window>

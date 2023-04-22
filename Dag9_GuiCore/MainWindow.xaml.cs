@@ -37,19 +37,38 @@ namespace Dag9_GuiCore
 
         private void bSeach_Click(object sender, RoutedEventArgs e)
         {
-            Mage tempMage = bll.GetMage(Int32.Parse(txfSeachId.Text));
-            TempMage = tempMage;
-            tbName.Text= tempMage.Name;
-            tbIsDark.Text =tempMage.IsDark.ToString();
+            if (IsNumeric(txfSeachId.Text))
+            {
+                Mage tempMage = bll.GetMage(Int32.Parse(txfSeachId.Text));
+                TempMage = tempMage;
+                if (tempMage != null)
+                {
+                    tbName.Text = tempMage.Name;
+                    CbisDark.IsChecked = tempMage.IsDark;
+                    updateMageSpellList(tempMage.MageId);
 
-            updateMageSpellList(tempMage.MageId);
-
+                }
+                else
+                {
+                    MessageBox.Show("Ingen Mages fundet med dette id");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Husk at id skal være et tal");
+            }
         }
+
+        private bool IsNumeric(string input)
+        {
+            return int.TryParse(input, out _); // try to parse the input as an integer, return true if successful
+        }
+
 
         private void bUpdate_Click_1(object sender, RoutedEventArgs e)
         {
             TempMage.Name = tbName.Text;
-            TempMage.IsDark = bool.Parse(tbIsDark.Text);
+            TempMage.IsDark = CbisDark.IsChecked.Value;
             bll.updateMage(TempMage);
             updateMageList();
         }
@@ -62,7 +81,8 @@ namespace Dag9_GuiCore
 
         private void bAdd_Click(object sender, RoutedEventArgs e)
         {
-            Mage mage = new Mage(tbName.Text, Boolean.Parse(tbIsDark.Text));
+            Mage mage = new Mage(tbName.Text, CbisDark.IsChecked.Value);
+
             bll.addMage(mage);
             updateMageList();
         }
@@ -92,23 +112,31 @@ namespace Dag9_GuiCore
             //Her finder jeg id,en. 
             var listBox = (ListBox)sender;
             var selectedItem = listBox.SelectedItem;
-            string s = selectedItem.ToString();
-            string[] stringSplit = s.Split();
+            if (selectedItem != null)
+            {
+                string s = selectedItem.ToString();
+                string[] stringSplit = s.Split();
 
-            //Samme kode som i søg. 
-            Mage tempMage = bll.GetMage(Int32.Parse(stringSplit[1]));
-            TempMage = tempMage;
-            tbName.Text = tempMage.Name;
-            tbIsDark.Text = tempMage.IsDark.ToString();
+                //Samme kode som i søg. 
+                Mage tempMage = bll.GetMage(Int32.Parse(stringSplit[1]));
+                TempMage = tempMage;
+                tbName.Text = tempMage.Name;
+                CbisDark.IsChecked = tempMage.IsDark;
 
-            updateMageSpellList(tempMage.MageId);
+                updateMageSpellList(tempMage.MageId);
 
-            //Dette fjernes. 
+            }
         }
 
+        private void OpenSpellToWizardWindow(object sender, RoutedEventArgs e)
+        {
+            //var edit = new Window1((Person)liste.SelectedItem);
+            ////edit.Closed += Edit_Dialog_Closed; //Bruges ikke i denne opgave
+            //edit.ShowDialog();
+            var SpellToWizardWindow = new Window1();
+            SpellToWizardWindow.ShowDialog();
 
-
-
+        }
     }
 }
 

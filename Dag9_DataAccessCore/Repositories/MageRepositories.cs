@@ -1,6 +1,7 @@
 ﻿using Dag9_DataAccessCore.Context;
 using Dag9_DataAccessCore.Mappers;
 using Dag9_DTOCore.Model;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -63,28 +64,47 @@ namespace Dag9_DataAccessCore.Repositories
             return outList;
         }
 
-        public static List<Spell> getMageSpells(int id)
-        {
-            List<int> tempMageSpellIDlist = new List<int>();
-            List<Spell> spells = new List<Spell>();
 
+        public static List<Spell> getMageSpells(int Id)
+        {
+            List<Spell> list = new List<Spell>();
             using (MageContex context = new MageContex())
             {
-                foreach (var item in context.Magespells)
+                var mage = context.Mages.Include(m => m.MageSpells).ThenInclude(ms => ms.Spell).FirstOrDefault(m => m.MageId == Id);
+
+                if (mage != null)
                 {
-                    if(item.MageId == id)
+                    foreach (var mageSpell in mage.MageSpells)
                     {
-                        tempMageSpellIDlist.Add(item.SpellId);
+                        list.Add(MageMapper.spellMapper(mageSpell.Spell));
                     }
                 }
 
-                foreach (int t in tempMageSpellIDlist)
-                {
-                    spells.Add(MageMapper.spellMapper(context.Spells.Find(t)));
-                }
             }
-            return spells;
+            return list;
         }
+
+        //public static List<Spell> getMageSpells(int id)
+        //{
+        //    List<Spell> spells = new List<Spell>();
+
+        //    using (MageContex context = new MageContex())
+        //    {
+        //        using (MageContex context2 = new MageContex())
+        //        {
+        //            foreach (var item in context.Magespells)
+        //            {
+        //                if (item.MageId == id)
+        //                {
+        //                    spells.Add(MageMapper.spellMapper(context2.Spells.Find(item.SpellId)));
+
+        //                }
+        //            }
+
+        //        }
+        //    }
+        //    return spells;
+        //}
 
 
 
