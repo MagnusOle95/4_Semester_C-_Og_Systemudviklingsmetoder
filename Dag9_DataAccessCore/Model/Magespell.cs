@@ -10,7 +10,6 @@ namespace Dag9_DataAccessCore.Model
     [Table("Magespell")]
     public class Magespell
     {
-        public int MagespellId { get; set; }
         public int MageId { get; set; }
         public Mage Mage { get; set; }
         public int SpellId { get; set; }

@@ -39,8 +39,8 @@ namespace Dag9_DataAccessCore.Context
                 new Mage{MageId=-2,Name="Kenny", IsDark=false},
             });
             modelBuilder.Entity<Magespell>().HasData(new Magespell[] {
-                new Magespell{MagespellId = -1, MageId = -1, SpellId = -1},
-                new Magespell{MagespellId = -2, MageId = -1, SpellId = -2}
+                new Magespell{MageId = -1, SpellId = -1},
+                new Magespell{MageId = -1, SpellId = -2}
 
             });
 
