@@ -67,44 +67,25 @@ namespace Dag9_DataAccessCore.Repositories
 
         public static List<Spell> getMageSpells(int Id)
         {
-            List<Spell> list = new List<Spell>();
+            List<Spell> outList = new List<Spell>();
+
             using (MageContex context = new MageContex())
             {
-                var mage = context.Mages.Include(m => m.MageSpells).ThenInclude(ms => ms.Spell).FirstOrDefault(m => m.MageId == Id);
+                var mageSpells = context.Magespells
+                    .Where(ms => ms.MageId == Id)
+                    .Include(ms => ms.Spell)  // This can help improve performance by reducing the number of database queries needed to retrieve the required data.
+                    .Select(ms => ms.Spell)
+                    .ToList();
 
-                if (mage != null)
+                foreach(var spell in mageSpells) 
                 {
-                    foreach (var mageSpell in mage.MageSpells)
-                    {
-                        list.Add(MageMapper.spellMapper(mageSpell.Spell));
-                    }
+                    outList.Add(MageMapper.spellMapper(spell));
                 }
-
             }
-            return list;
+            return outList;
         }
 
-        //public static List<Spell> getMageSpells(int id)
-        //{
-        //    List<Spell> spells = new List<Spell>();
-
-        //    using (MageContex context = new MageContex())
-        //    {
-        //        using (MageContex context2 = new MageContex())
-        //        {
-        //            foreach (var item in context.Magespells)
-        //            {
-        //                if (item.MageId == id)
-        //                {
-        //                    spells.Add(MageMapper.spellMapper(context2.Spells.Find(item.SpellId)));
-
-        //                }
-        //            }
-
-        //        }
-        //    }
-        //    return spells;
-        //}
+      
 
 
 

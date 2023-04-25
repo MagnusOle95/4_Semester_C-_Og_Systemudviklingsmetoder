@@ -15,7 +15,6 @@ namespace Dag9_DTOCore.Model
             SpellId = spellid;
         }
 
-        public int MagespellId { get; set; }
         public int MageId { get; set; }
         public int SpellId { get; set; }
         public Mage Mage { get; set; }
