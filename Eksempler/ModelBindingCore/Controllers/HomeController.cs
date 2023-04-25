@@ -14,11 +14,25 @@ namespace ModelBinding.Controllers
         {
             //Find person med id = id
             Person p = new Person();
-            p.Fornavn = "Ole";
-            p.Efternavn = "hansen";
-            p.Alder = 35;
+            p.Fornavn = "Flemming";
+            p.Efternavn = "Flemsen";
+            p.Alder = 87;
             return View("opret",p);
         }
+
+        public ActionResult vIndex()
+        {
+            //Find person med id = id
+            Person p = new Person();
+            p.Fornavn = "Claus";
+            p.Efternavn = "Clausen";
+            p.Alder = 32;
+            ViewBag.person = p;
+            return View();
+        }
+
+
+
 
         //[HttpPost]
         //public ActionResult Index(FormCollection formCollection)
