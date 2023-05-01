@@ -45,7 +45,17 @@ namespace Dag9_DataAccessCore.Context
             });
 
             modelBuilder.Entity<Magespell>()
-                .HasKey(ms => new { ms.MageId, ms.SpellId });
+            .HasKey(ms => new { ms.MageId, ms.SpellId });
+
+            modelBuilder.Entity<Magespell>()
+                .HasOne(ms => ms.Mage)
+                .WithMany(m => m.MageSpells)
+                .HasForeignKey(ms => ms.MageId);
+
+            modelBuilder.Entity<Magespell>()
+                .HasOne(ms => ms.Spell)
+                .WithMany(s => s.MageSpells)
+                .HasForeignKey(ms => ms.SpellId);
 
         }
         public DbSet<Mage> Mages { get; set; }

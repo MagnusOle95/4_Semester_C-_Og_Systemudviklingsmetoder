@@ -16,6 +16,7 @@ namespace Dag9_DataAccessCore.Mappers
             {
                 Dag9_DTOCore.Model.Mage tempMage = new Dag9_DTOCore.Model.Mage(mage.Name, mage.IsDark);
                 tempMage.MageId = mage.MageId;
+                tempMage.MageSpells = (ICollection<Dag9_DTOCore.Model.MageSpell>)mage.MageSpells;
                 return tempMage;
             }
             else
@@ -28,6 +29,7 @@ namespace Dag9_DataAccessCore.Mappers
         {
             Mage tempMage = new Mage(mage.Name, mage.IsDark);
             tempMage.MageId = mage.MageId;
+            tempMage.MageSpells = (ICollection<Magespell>)mage.MageSpells;
             return tempMage;
         }
 
@@ -41,6 +43,7 @@ namespace Dag9_DataAccessCore.Mappers
         {
             Dag9_DTOCore.Model.Spell tempSpell = new Dag9_DTOCore.Model.Spell(spell.Name, spell.Description);
             tempSpell.SpellID = spell.SpellID;
+            tempSpell.MageSpells = (ICollection<Dag9_DTOCore.Model.MageSpell>)spell.MageSpells;
             return tempSpell;
         }
 

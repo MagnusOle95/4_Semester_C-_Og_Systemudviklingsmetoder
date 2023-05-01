@@ -36,9 +36,15 @@ namespace Dag9_BusinessLogicCore.BLL
         }
 
 
-        public List<Spell> getMageSpells(int id) 
+        public List<Spell> getMageSpells(Mage mage) 
         {
-            return MageRepositories.getMageSpells(id);
+            return MageRepositories.getMageSpells(mage);
         }
+
+        public List<Spell> getSpells()
+        {
+            return MageRepositories.getSpells();
+        }
+
     }
 }

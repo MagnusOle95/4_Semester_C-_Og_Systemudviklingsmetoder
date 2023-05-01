@@ -45,7 +45,7 @@ namespace Dag9_GuiCore
                 {
                     tbName.Text = tempMage.Name;
                     CbisDark.IsChecked = tempMage.IsDark;
-                    updateMageSpellList(tempMage.MageId);
+                    updateMageSpellList(tempMage);
 
                 }
                 else
@@ -97,10 +97,10 @@ namespace Dag9_GuiCore
             }
         }
 
-        public void updateMageSpellList(int id)
+        public void updateMageSpellList(Mage mage)
         {
             lbSpells.Items.Clear();
-            List<Spell> MageSpellList = bll.getMageSpells(id);
+            List<Spell> MageSpellList = bll.getMageSpells(TempMage);
             foreach (Spell s in MageSpellList)
             {
                 lbSpells.Items.Add(s);
@@ -123,7 +123,7 @@ namespace Dag9_GuiCore
                 tbName.Text = tempMage.Name;
                 CbisDark.IsChecked = tempMage.IsDark;
 
-                updateMageSpellList(tempMage.MageId);
+                updateMageSpellList(tempMage);
 
             }
         }
@@ -133,7 +133,7 @@ namespace Dag9_GuiCore
             //var edit = new Window1((Person)liste.SelectedItem);
             ////edit.Closed += Edit_Dialog_Closed; //Bruges ikke i denne opgave
             //edit.ShowDialog();
-            var SpellToWizardWindow = new Window1();
+            var SpellToWizardWindow = new Window1(TempMage, bll);
             SpellToWizardWindow.ShowDialog();
 
         }
