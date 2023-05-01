@@ -13,16 +13,30 @@ namespace Dag4_Opgave4._5_spillekort_Enum
         public List<Spillekort> filterCardGame(FilterCardDelegate filter)
         {
             List<Spillekort> filteredeKort = new List<Spillekort>();
-            for(int i = 0; i < kortListe.Count; i++)
+            for (int i = 0; i < kortListe.Count; i++)
             {
                 if (filter.Invoke(kortListe[i]) == true)
                 {
                     filteredeKort.Add(kortListe[i]);
                 }
-                
+
             }
             return filteredeKort;
         }
+
+        //public List<Spillekort> filterCardGame(CardFilter filter)
+        //{
+        //    List<Spillekort> filteredeKort = new List<Spillekort>();
+        //    for (int i = 0; i < kortListe.Count; i++)
+        //    {
+        //        if (filter.filter(kortListe[i]) == true)
+        //        {
+        //            filteredeKort.Add(kortListe[i]);
+        //        }
+
+        //    }
+        //    return filteredeKort;
+        //}
 
         public void addCard(Kulør kulør, Nummer nummer)
         {
