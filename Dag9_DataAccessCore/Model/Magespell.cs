@@ -15,4 +15,5 @@ namespace Dag9_DataAccessCore.Model
         public int SpellId { get; set; }
         public Spell Spell { get; set; }
     }
+
 }

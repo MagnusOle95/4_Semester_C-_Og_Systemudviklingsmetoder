@@ -33,6 +33,14 @@ namespace Dag9_Dag11_WebApplication.Controllers
             return View("MageView");
         }
 
+        public ActionResult GetMageURL(int id)
+        {
+            Mage tempMage = bll.GetMage(id);
+            ViewBag.Name = tempMage.Name;
+            ViewBag.IsDark = tempMage.IsDark;
+            return View("MageView");
+        }
+
         public ActionResult updateMage(IFormCollection formCollection)
         {
             int id = int.Parse(formCollection["ID"]);
@@ -44,8 +52,11 @@ namespace Dag9_Dag11_WebApplication.Controllers
             return View("MageView");
         }
 
-
-
+        [HttpGet]
+        public ActionResult CreateMageView()
+        {
+            return View();
+        }
 
 
 

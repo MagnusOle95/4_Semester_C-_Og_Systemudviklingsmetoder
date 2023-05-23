@@ -47,5 +47,14 @@ namespace Dag9_DataAccessCore.Mappers
             return tempSpell;
         }
 
+        public static Spell spellmapper(Dag9_DTOCore.Model.Spell spell)
+        {
+            Spell TempSpell = new Spell(spell.Name, spell.Description);
+            TempSpell.SpellID = spell.SpellID;
+            TempSpell.Description = spell.Description;
+            TempSpell.Name = spell.Name;
+            return TempSpell;
+        }
+
     }
 }

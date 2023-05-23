@@ -1,5 +1,6 @@
 ﻿using Dag9_DataAccessCore.Context;
 using Dag9_DataAccessCore.Mappers;
+
 using Dag9_DTOCore.Model;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -30,6 +31,55 @@ namespace Dag9_DataAccessCore.Repositories
 
             }
         }
+
+        public static void updateMageLeanedSPells(Mage mage, List<Spell> spells)
+        {
+            List<Spell> Spells = new List<Spell>();
+            using (MageContex context = new MageContex())
+            {
+                foreach(Spell s in spells)
+                {
+                    // Check if the Magespell already exists
+                    bool magespellExists = context.Magespells.Any(ms => ms.MageId == mage.MageId && ms.SpellId == s.SpellID);
+
+                    if (!magespellExists)
+                    {
+                        context.Magespells.Add(new Model.Magespell { MageId = mage.MageId, SpellId = s.SpellID });
+                    }
+                }
+
+                
+                List<int> LeanedSpellsID = new List<int>();
+                foreach(Spell s in spells)
+                {
+                    LeanedSpellsID.Add(s.SpellID);
+                }
+
+                List<int> intDBLeanedSpells = new List<int>();
+                foreach (var ms in context.Magespells)
+                {
+                    intDBLeanedSpells.Add(ms.SpellId);
+                }
+
+                var magespellsNotInList = intDBLeanedSpells.Except(LeanedSpellsID);
+
+                foreach(var sID in magespellsNotInList)
+                {
+                    var MagespellFromID = context.Magespells
+                       .FirstOrDefault(e => e.MageId == mage.MageId && e.SpellId == sID);
+
+                    if (MagespellFromID != null)
+                    {
+                        context.Magespells.Remove(MagespellFromID);
+                        context.SaveChanges();
+                    }
+                }
+                context.SaveChanges();
+
+            }
+         
+        }
+
 
         public static void deleteMage(Mage mage) 
         {

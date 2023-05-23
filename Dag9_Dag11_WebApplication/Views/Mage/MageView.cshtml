@@ -1,9 +1,4 @@
-﻿
-@{
-    Layout = null;
-}
-
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 <html>
 <head>
@@ -12,6 +7,7 @@
 
 </head>
 <body>
+    <div>
     @using (Html.BeginForm("GetMage", "Mage"))
         {
         <p>
@@ -25,6 +21,8 @@
 
     @using (Html.BeginForm("updateMage", "Mage"))
     {
+                @Html.Hidden("ID")
+        
         <p>
                 @Html.Label("Navn:") <br />
                 @Html.TextBox("Name")
@@ -40,6 +38,12 @@
          </p>
 
     }
+    </div>
+    <div>
+        <ul>
+
+        </ul>
+    </div>
         
     
 </body>

@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>CreateMageView</title>
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm("updateMage", "Mage"))
+        {
+            <p>
+                @Html.Label("Navn:") <br />
+                @Html.TextBox("Name")
+
+            </p>
+
+            <p>
+                @Html.Label("Is Dark:") <br />
+                @Html.TextBox("IsDark")
+            </p>
+             <p>
+             <input type="submit" value="Opret:">
+             </p>
+
+        }
+
+</body>
+</html>

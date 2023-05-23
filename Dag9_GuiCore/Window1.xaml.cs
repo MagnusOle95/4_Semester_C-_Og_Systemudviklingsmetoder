@@ -33,6 +33,7 @@ namespace Dag9_GuiCore
             TempMage= mage;
             Bll = bll;
             LeanedSpellList= new List<Spell>();
+            LeanedSpellList = Bll.getMageSpells(TempMage);
             InitializeComponent();
             showAllLeanedSpells();
             showAllNotLeanedSpells();
@@ -42,13 +43,13 @@ namespace Dag9_GuiCore
 
         private void bOk_Click(object sender, RoutedEventArgs e)
         {
+            Bll.updateMageLeanedSPells(TempMage, LeanedSpellList);
             this.Close();
         }
 
         public void showAllLeanedSpells()
         {
             //lbLeanedSpells.Items.Clear();
-            LeanedSpellList = Bll.getMageSpells(TempMage);
             foreach (Spell s in LeanedSpellList)
             {
                 lbLeanedSpells.Items.Add(s);
@@ -69,6 +70,7 @@ namespace Dag9_GuiCore
             {
                 lbLeanedSpells.Items.Remove(tempSelectedSpell);
                 LbNotLeanedSpells.Items.Add(tempSelectedSpell);
+                LeanedSpellList.Remove(tempSelectedSpell);
                 tempSelectedSpell = null;
 
             }
@@ -80,6 +82,7 @@ namespace Dag9_GuiCore
             {
                 lbLeanedSpells.Items.Add(tempSelectedSpell);
                 LbNotLeanedSpells.Items.Remove(tempSelectedSpell);
+                LeanedSpellList.Add(tempSelectedSpell);
                 tempSelectedSpell = null;
             }
         }

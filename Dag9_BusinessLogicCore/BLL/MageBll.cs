@@ -20,6 +20,12 @@ namespace Dag9_BusinessLogicCore.BLL
             MageRepositories.updateMage(mage);
         }
 
+        //Its update a MagesLeanedSpells
+        public void updateMageLeanedSPells(Mage mage, List<Spell> spells ) 
+        {
+            MageRepositories.updateMageLeanedSPells(mage, spells);
+        }
+
         public void deleteMage(Mage mage) 
         {
             MageRepositories.deleteMage(mage);
