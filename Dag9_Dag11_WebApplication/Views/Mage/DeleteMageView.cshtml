@@ -1,0 +1,92 @@
+﻿
+@{
+    //Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>DeleteMageView</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#myList li").click(function () {
+                var selectedItem = $(this).text();
+
+                $.ajax({
+                    url: '@Url.Action("ShwoMageInDeleteMage", "Mage")',
+                    type: 'POST',
+                    data: { selectedItem: selectedItem },
+                    success: function (response) {
+                        if (response.success) {
+                            // Do something on success
+                             $("#Name").val(response.name);
+                             $("#IsDark").val(response.isDark);
+                             $("#ID").val(response.mageId);
+                            //alert("Data processed successfully");
+                        }
+                    },
+                    error: function () {
+                        alert("Fejl er opståget kunne ikke finde Personen");
+                    }
+                });
+            });
+        });
+    </script>
+    
+
+</head>
+<body>
+
+    <div>
+        @using (Html.BeginForm("DeleteMage", "Mage"))
+        { 
+            @Html.Hidden("ID")
+
+            <p>
+                @Html.Label("Navn:") <br />
+                @Html.TextBox("Name", null, new { @readonly = "readonly" })
+
+            </p>
+
+            <p>
+                @Html.Label("Is Dark:") <br />
+                @Html.TextBox("IsDark", null, new { @readonly = "readonly" })
+            </p>
+             <p>
+             <input type="submit" value="Slet:">
+             </p>
+        }
+
+    </div>
+    <div>
+        <p style="font-size: 18px; font-weight: bold;">Du skal vælge den mage du ønsker at slette</p>
+    </div>
+
+    <style>
+    .list-box {
+        border: 1px solid black;
+        padding: 10px;
+        width: 350px;
+    }</style>
+
+
+    <div class = "list-box" >
+    @if (@ViewBag.Magelist != null)
+    {
+        <ul id="myList">
+            @foreach (var item in @ViewBag.Magelist)
+            {
+                        <li>@item.Name ID: @item.MageId </li>
+            }
+        </ul>
+    }
+    
+    
+    </div>
+
+</body>
+</html>

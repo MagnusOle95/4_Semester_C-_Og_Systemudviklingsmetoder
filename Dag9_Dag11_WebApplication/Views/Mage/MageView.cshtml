@@ -19,10 +19,13 @@
          </p>
         }
 
-    @using (Html.BeginForm("updateMage", "Mage"))
-    {
+        <div>
+        @if (Model != null)
+        {
+            @using (Html.BeginForm("updateMage", "Mage"))
+            { 
                 @Html.Hidden("ID")
-        
+
         <p>
                 @Html.Label("Navn:") <br />
                 @Html.TextBox("Name")
@@ -34,16 +37,26 @@
                 @Html.TextBox("IsDark")
         </p>
          <p>
-         <input type="submit" value="Opdater:">
+         <input type="submit" value="Opdater">
          </p>
+            }
+        }
+        else{
+            @Html.Hidden("ID")
+            <p>
+                @Html.Label("Navn:") <br />
+                @Html.TextBox("Name", null, new { @readonly = "readonly" })
+                </p>
 
-    }
+            <p>
+                @Html.Label("Is Dark:") <br />
+                @Html.TextBox("IsDark", null, new { @readonly = "readonly" })
+                </p> 
+            }
+        
     </div>
-    <div>
-        <ul>
 
-        </ul>
-    </div>
+    
         
     
 </body>
