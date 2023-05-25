@@ -1,10 +1,13 @@
 ﻿using Dag9_DataAccessCore.Repositories;
 using Dag9_DTOCore.Model;
+using External_API;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml;
+using System.Xml.Linq;
 
 namespace Dag9_BusinessLogicCore.BLL
 {
@@ -50,6 +53,16 @@ namespace Dag9_BusinessLogicCore.BLL
         public List<Spell> getSpells()
         {
             return MageRepositories.getSpells();
+        }
+
+        public XElement getQuitichWeatherForSchooles(string city, string countrycode)
+        {
+            return WeatherAPI.GetQuidditchWeatherForSchooles(city, countrycode);
+        }
+
+        public List<School> getSchools() 
+        {
+            return MageRepositories.getSchools();
         }
 
     }

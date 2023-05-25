@@ -6,9 +6,4 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Dag9_DataAccessCore\Dag9_DataAccessCore.csproj" />
-    <ProjectReference Include="..\External_API\External_API.csproj" />
-  </ItemGroup>
-
 </Project>

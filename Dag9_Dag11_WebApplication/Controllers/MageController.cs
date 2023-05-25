@@ -17,13 +17,14 @@ namespace Dag9_Dag11_WebApplication.Controllers
             _logger = logger;
         }
 
-        //Her starter mit. 
-        [HttpGet]
+        //Her starter mit.
+        [Route("GetMage")]
         public ActionResult Mageview()
         {
             return View();
         }
 
+        
         public ActionResult GetMage(IFormCollection formCollection)
         {
             int id = int.Parse(formCollection["ID"]);
@@ -35,6 +36,7 @@ namespace Dag9_Dag11_WebApplication.Controllers
             return View("MageView",mm);
         }
 
+        [Route("GetMage/{id}")]
         public ActionResult GetMageURL(int id)
         {
             Mage tempMage = bll.GetMage(id);
@@ -56,6 +58,7 @@ namespace Dag9_Dag11_WebApplication.Controllers
             return View("MageView");
         }
 
+        [Route("CreateMage")]
         public ActionResult CreateMageView()
         {
             return View();
@@ -71,6 +74,7 @@ namespace Dag9_Dag11_WebApplication.Controllers
             return View("CreateMageView");
         }
 
+        [Route("DeleteMage")]
         public ActionResult DeleteMageView()
         {
             ViewBag.Magelist = bll.getMages();

@@ -57,10 +57,15 @@ namespace Dag9_DataAccessCore.Context
                 .WithMany(s => s.MageSpells)
                 .HasForeignKey(ms => ms.SpellId);
 
+            modelBuilder.Entity<School>().HasData(new School[] {
+                new School{SchoolId = -1, SchoolName = "Hogwarts", City = "Paris", CountryCode = "FR"}
+                });
+
         }
         public DbSet<Mage> Mages { get; set; }
         public DbSet<Spell> Spells { get; set; }
         public DbSet<Magespell> Magespells { get; set; }
+        public DbSet<School> Schools { get; set; }
 
     }
 

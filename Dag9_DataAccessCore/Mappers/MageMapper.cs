@@ -56,5 +56,13 @@ namespace Dag9_DataAccessCore.Mappers
             return TempSpell;
         }
 
+        public static Dag9_DTOCore.Model.School schoolMapper(School school)
+        {
+            Dag9_DTOCore.Model.School tempSchool = new Dag9_DTOCore.Model.School(school.SchoolName, school.City, school.CountryCode);
+            tempSchool.SchoolId= school.SchoolId;
+            return tempSchool;
+        }
+
+
     }
 }

@@ -21,6 +21,7 @@
         <TextBlock x:Name="txfMages" TextWrapping="Wrap" Text="Mages:" Margin="55,61,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
         <CheckBox x:Name="CbisDark" Content="Is a dark Wizard" HorizontalAlignment="Left" Margin="270,124,0,0" VerticalAlignment="Top"/>
         <Button Content="Tilføj Spell" HorizontalAlignment="Left" Margin="434,230,0,0" VerticalAlignment="Top" Height="33" Width="72" Click="OpenSpellToWizardWindow"/>
+        <ListBox x:Name="lbSchools" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="434,306,167,81" SelectionChanged="lbSchools_SelectionChanged"/>
 
     </Grid>
 </Window>

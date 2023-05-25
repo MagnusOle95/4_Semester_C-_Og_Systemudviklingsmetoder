@@ -14,6 +14,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Xml;
+using System.Xml.Linq;
 
 namespace Dag9_GuiCore
 {
@@ -29,6 +31,7 @@ namespace Dag9_GuiCore
             lbMages.SelectionChanged += ListBox_SelectionChanged;
             //Sætter alle mages.
             updateMageList();
+            Showschools();
 
         }
 
@@ -137,6 +140,50 @@ namespace Dag9_GuiCore
             SpellToWizardWindow.ShowDialog();
 
         }
+
+        private void Showschools()
+        {
+            List<School> schoollist = bll.getSchools();
+            foreach(School school in schoollist) 
+            {
+                lbSchools.Items.Add(school);
+            }
+        }
+
+        private void lbSchools_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            ListBox listBox = (ListBox)sender;
+
+            if (listBox.SelectedItem != null)
+            {
+                School selectedSchool = (School)listBox.SelectedItem;
+                FindWeatherforSchool(selectedSchool.City, selectedSchool.CountryCode, selectedSchool.SchoolName);
+            }
+
+        }
+
+        private void FindWeatherforSchool(string city, string countrycode, string schoolName)
+        {
+            XElement wInfo = bll.getQuitichWeatherForSchooles(city, countrycode);
+
+            StringBuilder message = new StringBuilder();
+            message.AppendLine($"Skole: {schoolName}");
+            message.AppendLine($"{"Land: " + wInfo.Element("country").Value}");
+            message.AppendLine($"By: {wInfo.Element("nameOfCity").Value}");
+            message.AppendLine($"Klokkeslet ved skole: {wInfo.Element("time").Value}");
+            message.AppendLine("--------------------");
+            message.AppendLine($"{"Vejr forhold"}");
+            message.AppendLine($"{wInfo.Element("temperatureC").Value + "°C"}");
+            message.AppendLine($"{wInfo.Element("windspeed").Value}");
+            message.AppendLine($"{wInfo.Element("clouds").Value}");
+ 
+            MessageBox.Show(message.ToString(), "Vejrforhold for quidditch");
+
+        }
+
+
+        
+
     }
 }
 

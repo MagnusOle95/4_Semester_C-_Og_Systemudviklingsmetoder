@@ -20,8 +20,15 @@ app.UseRouting();
 
 app.UseAuthorization();
 
+app.MapGet("/", (HttpContext context) =>
+{
+    context.Response.Redirect("/GetMage");
+    return Task.CompletedTask;
+});
+
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Mage}/{action=Mageview}/{id?}");
+    pattern: "{controller=Home}/{action=Index}/{id?}"
+);
 
 app.Run();

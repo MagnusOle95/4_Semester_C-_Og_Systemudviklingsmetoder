@@ -150,6 +150,19 @@ namespace Dag9_DataAccessCore.Repositories
             return outList;
         }
 
+        public static List<School> getSchools()
+        {
+            List<School> outList = new List<School>();
+
+            using (MageContex context = new MageContex())
+            {
+                foreach (var item in context.Schools)
+                {
+                    outList.Add(MageMapper.schoolMapper(item));
+                }
+            }
+            return outList;
+        }
 
 
 
