@@ -25,7 +25,7 @@ namespace Dag9_DataAccessCore.Context
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Data Source=LAPTOP-FJR3J3JQ\\SQLEXPRESS;Initial Catalog=MageDB;Integrated Security=SSPI; TrustServerCertificate=true");
+            optionsBuilder.UseSqlServer("Data Source=DESKTOP-VMKKTQO;Initial Catalog=MageDB;Integrated Security=SSPI; TrustServerCertificate=true");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -57,8 +57,15 @@ namespace Dag9_DataAccessCore.Context
                 .WithMany(s => s.MageSpells)
                 .HasForeignKey(ms => ms.SpellId);
 
+
             modelBuilder.Entity<School>().HasData(new School[] {
-                new School{SchoolId = -1, SchoolName = "Hogwarts", City = "Paris", CountryCode = "FR"}
+                new School{SchoolId = -1, SchoolName = "Hogwarts", City = "Edinburgh", CountryCode = "GB-SCT"},
+                new School{SchoolId = -2, SchoolName = "Beauxbatons", City = "Paris", CountryCode = "FR"},
+                new School{SchoolId = -3, SchoolName = "Durmstrang", City = "Oslo", CountryCode = "NO"},
+                new School{SchoolId = -4, SchoolName = "Mahoutokoro", City = "Tokyo", CountryCode = "JP"},
+                new School{SchoolId = -5, SchoolName = "Uagadou", City = "Kampala", CountryCode = "UG"},
+                new School{SchoolId = -6, SchoolName = "Castelobruxo", City = "Brasília", CountryCode = "BR"},
+                new School{SchoolId = -7, SchoolName = "Ilvermorny", City = "Washington D.C.", CountryCode = "US"}
                 });
 
         }

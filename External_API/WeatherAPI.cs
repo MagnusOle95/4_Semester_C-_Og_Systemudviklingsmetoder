@@ -37,10 +37,10 @@ namespace External_API
         {
             List<XElement> QuidditchWeatherForSchooles = new List<XElement>();
 
-            XmlDocument Pari = getWeather(city,countryCode);
+            XmlDocument wCity = getWeather(city,countryCode);
 
             //Parse stringen fra køen til en xml fil igen. 
-            XElement WeatherAPI_XMLDOC = XElement.Parse(Pari.OuterXml);
+            XElement WeatherAPI_XMLDOC = XElement.Parse(wCity.OuterXml);
 
             //Finder de informationer jeg skal bruge. 
             string nameOfCityString = WeatherAPI_XMLDOC.Element("city").Attribute("name").Value;
