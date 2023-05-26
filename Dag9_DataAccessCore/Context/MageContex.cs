@@ -33,11 +33,28 @@ namespace Dag9_DataAccessCore.Context
             modelBuilder.Entity<Spell>().HasData(new Spell[] {
                 new Spell{SpellID=-1, Name="Awada Karawra", Description="The killing Curse"},
                 new Spell{SpellID=-2,Name="Crusiatis", Description="Torture Curse"},
+                new Spell{SpellID=-3,Name="Imperio", Description="Total control (Mindcontrole)"},
+                new Spell{SpellID=-4,Name="Expelliarmus", Description="Disarming Charm"},
+                new Spell{SpellID=-5,Name="Expecto Patronum", Description="Patronus Charm"},
+                new Spell{SpellID=-6,Name="Reparo", Description="Mending Charm"},
+                new Spell{SpellID=-7,Name="Alohomora", Description="Unlocking Charm"},
+                new Spell{SpellID=-8,Name="Wingardium Leviosa", Description="Levitation Charm"},
+                new Spell{SpellID=-9,Name="Petrificus Totalus", Description="Full Body-Bind Curse"},
+                new Spell{SpellID=-10,Name="Obliviate", Description="Memory Charm"},
+                new Spell{SpellID=-11,Name="Riddikulus", Description="Boggart-Banishing Spell"},
+                new Spell{SpellID=-12,Name="Accio", Description="Summoning Charm"},
+                new Spell{SpellID=-13,Name="Sectumsempra", Description="bleeding and lacerations"},
+                new Spell{SpellID=-14,Name="Lumos", Description="Wand-Lighting Charm"},
             });
+
             modelBuilder.Entity<Mage>().HasData(new Mage[] {
                 new Mage{MageId=-1,Name="Elvira", IsDark=true},
-                new Mage{MageId=-2,Name="Kenny", IsDark=false},
+                new Mage{MageId=-2,Name="Bavmorda", IsDark=false},
+                new Mage{MageId=-3,Name="Morgan", IsDark=true},
+                new Mage{MageId=-4,Name="Henning", IsDark=false},
+                new Mage{MageId=-5,Name="Kirsten_den_sure", IsDark=true},
             });
+
             modelBuilder.Entity<Magespell>().HasData(new Magespell[] {
                 new Magespell{MageId = -1, SpellId = -1},
                 new Magespell{MageId = -1, SpellId = -2}
