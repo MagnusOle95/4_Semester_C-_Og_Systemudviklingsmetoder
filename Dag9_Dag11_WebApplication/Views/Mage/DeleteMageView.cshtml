@@ -3,6 +3,7 @@
     //Layout = null;
 }
 
+@model ModelMage
 <!DOCTYPE html>
 
 <html>
@@ -36,6 +37,25 @@
             });
         });
     </script>
+
+    <script>
+        $(document).ready(function () {
+            $("#submitButton").click(function (e) {
+                e.preventDefault(); // Prevent the form from submitting
+
+                var nameValue = $("#Name").val(); // Get the value of the Name field
+
+                if (nameValue === "") {
+                    $("#Message2").show(); // Show the custom message if Name is empty
+                    $("#Message1").hide();
+                } else {
+                    $("#Message2").hide(); // Hide the custom message if Name is not empty
+                    $("#Message1").show();
+                    $("form").submit(); // Submit the form
+                }
+            });
+        });
+    </script>
     
 
 </head>
@@ -49,21 +69,22 @@
             <p>
                 @Html.Label("Navn:") <br />
                 @Html.TextBox("Name", null, new { @readonly = "readonly" })
-
+                <br>
             </p>
 
             <p>
                 @Html.Label("Is Dark:") <br />
                 @Html.TextBox("IsDark", null, new { @readonly = "readonly" })
             </p>
-             <p>
-             <input type="submit" value="Slet:">
-             </p>
+            <p>
+                <input type="submit" id="submitButton" value="Slet:">
+            </p>
         }
 
     </div>
     <div>
-        <p style="font-size: 18px; font-weight: bold;">Du skal vælge den mage du ønsker at slette</p>
+        <p id="Message1" style="font-size: 18px; font-weight: bold;">Du skal vælge den mage du ønsker at slette</p>
+        <p id="Message2" style="font-size: 25px; font-weight: bold; color: red; display: none;">Du skal vælge en mage før du klikker slet!!</p>
     </div>
 
     <style>
@@ -90,3 +111,9 @@
 
 </body>
 </html>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

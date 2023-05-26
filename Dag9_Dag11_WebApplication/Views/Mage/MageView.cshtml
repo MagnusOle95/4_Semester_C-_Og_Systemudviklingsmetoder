@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-
+@model ModelMage
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
@@ -13,6 +13,14 @@
         <p>
                 @Html.Label("ID:") <br />
                 @Html.TextBox("ID")
+
+                <br>
+                @if (ViewBag.fejl == "Fejl")
+                {
+                <p style="color: red;">Mage findes ikke i systemet, prøv med et andet id</p>
+                }
+
+                @Html.ValidationMessage("ID", "", new { @class = "text-danger" })
         </p>
          <p>
          <input type="submit" value="Søg:">
@@ -29,12 +37,16 @@
         <p>
                 @Html.Label("Navn:") <br />
                 @Html.TextBox("Name")
+                <br>
+                        @Html.ValidationMessage("Name", "", new { @class = "text-danger" })
                 
         </p>
 
         <p>
                 @Html.Label("Is Dark:") <br />
                 @Html.TextBox("IsDark")
+                <br>
+                        @Html.ValidationMessage("IsDark","", new { @class = "text-danger" })
         </p>
          <p>
          <input type="submit" value="Opdater">
@@ -56,8 +68,11 @@
         
     </div>
 
-    
-        
-    
 </body>
 </html>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

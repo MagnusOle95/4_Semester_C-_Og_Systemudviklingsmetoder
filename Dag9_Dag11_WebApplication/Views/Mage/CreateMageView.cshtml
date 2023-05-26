@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-
+@model ModelMage
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
@@ -12,18 +12,32 @@
             <p>
                 @Html.Label("Navn:") <br />
                 @Html.TextBox("Name")
-
+                <br>
+                    @Html.ValidationMessage("Name", "", new { @class = "text-danger" })
+                
             </p>
 
             <p>
-                @Html.Label("Is Dark:") <br />
+                @Html.Label("Is Dark (Default = False):") <br />
                 @Html.TextBox("IsDark")
+                <br>
+                @Html.ValidationMessage("IsDark","", new { @class = "text-danger" })
             </p>
              <p>
+
              <input type="submit" value="Opret:">
              </p>
 
         }
+    </div>
+
 
 </body>
 </html>
+
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

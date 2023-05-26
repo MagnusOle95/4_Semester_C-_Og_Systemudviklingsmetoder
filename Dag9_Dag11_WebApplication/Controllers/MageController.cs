@@ -28,18 +28,44 @@ namespace Dag9_Dag11_WebApplication.Controllers
         public ActionResult GetMage(IFormCollection formCollection)
         {
             int id = int.Parse(formCollection["ID"]);
-            Mage tempMage = bll.GetMage(id);
-            ModelMage mm = new ModelMage();
-            mm.ID = id;
-            mm.Name = tempMage.Name;
-            mm.IsDark = tempMage.IsDark;
-            return View("MageView",mm);
+
+            Mage tempMage;
+
+            try
+            {
+                tempMage = bll.GetMage(id);
+            }
+            catch
+            {
+                tempMage = null;
+            }
+
+            if (tempMage != null)
+            {
+                ModelMage mm = new ModelMage();
+                mm.ID = id;
+                mm.Name = tempMage.Name;
+                mm.IsDark = tempMage.IsDark;
+                return View("MageView",mm);
+            }
+            ViewBag.fejl = "Fejl";
+            return View("MageView");
         }
 
         [Route("GetMage/{id}")]
         public ActionResult GetMageURL(int id)
         {
-            Mage tempMage = bll.GetMage(id);
+            Mage tempMage;
+
+            try
+            {
+                tempMage = bll.GetMage(id);
+            }
+            catch
+            {
+                tempMage = null;
+            }
+
             ModelMage mm = new ModelMage();
             mm.ID = id;
             mm.Name = tempMage.Name;
@@ -51,9 +77,19 @@ namespace Dag9_Dag11_WebApplication.Controllers
         {
             int id = int.Parse(formCollection["ID"]);
             Mage tempMage = bll.GetMage(id);
-
             tempMage.Name = formCollection["Name"];
-            tempMage.IsDark = Boolean.Parse(formCollection["IsDark"]);
+
+            bool IsDark;
+            try
+            {
+                IsDark = Boolean.Parse(formCollection["IsDark"]);
+            }
+            catch
+            {
+                IsDark = false;
+            }
+
+            tempMage.IsDark = IsDark;
             bll.updateMage(tempMage);
             return View("MageView");
         }
@@ -68,7 +104,16 @@ namespace Dag9_Dag11_WebApplication.Controllers
         {
             string Name = formCollection["Name"];
             string NameNoSpace = Name.Replace(" ", "");
-            bool IsDark = Boolean.Parse(formCollection["IsDark"]);
+            bool IsDark;
+            try
+            {
+                IsDark = Boolean.Parse(formCollection["IsDark"]);
+            }
+            catch 
+            {
+                IsDark = false;
+            }
+
             Mage m = new Mage(NameNoSpace, IsDark);
             bll.addMage(m);
             return View("CreateMageView");
