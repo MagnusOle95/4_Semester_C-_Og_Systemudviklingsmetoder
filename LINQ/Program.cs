@@ -15,6 +15,7 @@
         // LINQ query to filter and project the collection
         var filteredPeople = from person in people
                              where person.Age > 30
+                             orderby person.Name descending
                              select person.Name;
 
         // Print the filtered results

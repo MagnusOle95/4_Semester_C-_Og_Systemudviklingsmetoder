@@ -25,7 +25,7 @@ namespace Dag9_DataAccessCore.Context
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Data Source=DESKTOP-VMKKTQO;Initial Catalog=MageDB;Integrated Security=SSPI; TrustServerCertificate=true");
+            optionsBuilder.UseSqlServer("Data Source=LAPTOP-FJR3J3JQ\\SQLEXPRESS;Initial Catalog=MageDB;Integrated Security=SSPI; TrustServerCertificate=true");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

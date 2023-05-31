@@ -126,6 +126,7 @@ namespace Dag9_DataAccessCore.Repositories
                     .Where(m => m.Equals(MageMapper.MapMage(mage)))
                     .SelectMany(m => m.MageSpells)
                     .Select(ms => ms.Spell)
+                    .OrderBy(s => s.Name)
                     .ToList();
 
                 foreach(var spell in Spells) 
