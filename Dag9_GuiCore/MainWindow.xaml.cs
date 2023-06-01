@@ -84,7 +84,8 @@ namespace Dag9_GuiCore
 
         private void bAdd_Click(object sender, RoutedEventArgs e)
         {
-            Mage mage = new Mage(tbName.Text, CbisDark.IsChecked.Value);
+            string NameNoSpace = tbName.Text.Replace(" ", "");
+            Mage mage = new Mage(NameNoSpace, CbisDark.IsChecked.Value);
 
             bll.addMage(mage);
             updateMageList();
