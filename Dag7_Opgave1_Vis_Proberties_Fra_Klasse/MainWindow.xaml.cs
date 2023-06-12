@@ -31,11 +31,8 @@ namespace Dag7_Opgave1_Vis_Proberties_Fra_Klasse
             p.Score = 107;
             p.Accepted = true;
 
-            tfName.DataContext= p;
-            tfAge.DataContext= p;
-            tfWeight.DataContext= p;
-            tfScore.DataContext= p;
-            cbAccepted.DataContext= p;
+            this.DataContext = p;
+
         }
 
         private void bChancePerson_Click(object sender, RoutedEventArgs e)

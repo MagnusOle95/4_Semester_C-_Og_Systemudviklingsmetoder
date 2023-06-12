@@ -30,11 +30,7 @@ namespace Dag7_Opgave5_NewWindow_MenuWindow
             People.Add(new Person("Morten", 23, 90, 0, false));
             People.Add(new Person("Lasse", 23, 89, 1000, true));
 
-            tfName.DataContext = People;
-            tfAge.DataContext = People;
-            tfWeight.DataContext = People;
-            tfScore.DataContext = People;
-            cbAccepted.DataContext = People;
+            this.DataContext = People;
 
             liste.ItemsSource = People;
 

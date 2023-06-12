@@ -24,7 +24,8 @@
                 <MenuItem Name ="About" Header="_About" />
             </MenuItem>
         </Menu>
-        
+
+        <!--<ListBox Name ="liste" ItemsSource="{Binding People}" DisplayMemberPath="Name" Margin="0,33,410,0" IsSynchronizedWithCurrentItem="True">-->
         <ListBox Name ="liste" ItemsSource="{Binding People}" Margin="0,33,410,0" IsSynchronizedWithCurrentItem="True">
             <ListBox.ItemTemplate>
                 <DataTemplate>

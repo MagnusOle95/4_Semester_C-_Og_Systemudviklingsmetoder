@@ -25,11 +25,7 @@ namespace Dag7_Opgave5_NewWindow_MenuWindow
         { //læg mærke til constructoren her. 
             InitializeComponent();
             person = p;
-            tfName.DataContext = person;
-            tfAge.DataContext = person;
-            tfWeight.DataContext = person;
-            tfScore.DataContext = person;
-            cbAccepted.DataContext = person;
+            this.DataContext = person;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

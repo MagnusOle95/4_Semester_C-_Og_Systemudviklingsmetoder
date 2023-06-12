@@ -7,11 +7,11 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <DockPanel LastChildFill="True">
+        <DockPanel LastChildFill="False">
             <Button x:Name="bNord" DockPanel.Dock="Top" FontFamily="Courier New" FontSize="36">Nord</Button>
             <Button x:Name="bSyd" DockPanel.Dock="Bottom" FontFamily="Courier New" FontSize="36">Syd</Button>
             <Button x:Name="bVest" DockPanel.Dock="Left" FontFamily="Courier New" FontSize="36">Vest</Button>
-            <Button x:Name="bOest" DockPanel.Dock="Right" FontFamily="Courier New" FontSize="36" Width="129">Øst</Button>
+            <Button x:Name="bOest" DockPanel.Dock="Right" FontFamily="Courier New" FontSize="36" Width="120">Øst</Button>
             <TextBlock x:Name="tCenter" FontFamily="Courier New" FontSize="36">Teksten:</TextBlock>
         </DockPanel>
             
