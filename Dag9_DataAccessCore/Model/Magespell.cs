@@ -11,7 +11,7 @@ namespace Dag9_DataAccessCore.Model
     public class Magespell
     {
         public int MageId { get; set; }
-        public Mage Mage { get; set; }
+        public Mage Mage { get; set; } //Navigation proberty. 
         public int SpellId { get; set; }
         public Spell Spell { get; set; }
     }

@@ -12,9 +12,15 @@ namespace Dag4_Opgave4.A_Delegate_eventsOgListeners
     {
         public Warning alarm;
 
-        public void Setwarning(Warning wa)
+        public void SetwarningSingleCast(Warning wa)
         {
             alarm = wa;
+
+        }
+
+        public void SetwarningMultiCast(Warning wa)
+        {
+            alarm += wa;
 
         }
 
@@ -22,7 +28,7 @@ namespace Dag4_Opgave4.A_Delegate_eventsOgListeners
         {
             Random randomTal = new Random();
             int tal = randomTal.Next(0,101);
-            if (tal > 50) 
+            if (true) 
             {
                 alarm.Invoke();
             }

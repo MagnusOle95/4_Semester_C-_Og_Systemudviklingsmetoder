@@ -14,7 +14,9 @@ namespace Dag9_DataAccessCore.Model
         public string Name { get; set; }
         public bool IsDark { get; set; }
 
+
         public virtual ICollection<Magespell> MageSpells { get; set; }
+
 
         //private List<Spell> spells;
         //public virtual List<Spell> Spells { get { return spells; } }

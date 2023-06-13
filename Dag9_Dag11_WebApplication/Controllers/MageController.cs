@@ -6,6 +6,7 @@ using System.Diagnostics;
 
 namespace Dag9_Dag11_WebApplication.Controllers
 {
+    //[Route("Mage")]
     public class MageController : Controller
     {
         MageBll bll = new MageBll();
