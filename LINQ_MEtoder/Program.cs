@@ -101,7 +101,7 @@ foreach (var V in result2)
     Console.WriteLine(V);
 }
 
-Console.WriteLine();
+Console.WriteLine("Kig over");
 
 
 //Aggregeringsudvidelser
